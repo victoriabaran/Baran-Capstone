@@ -1,0 +1,30 @@
+---
+title: "How Likely Is 'Likely'?"
+author: "Victoria Baran"
+date: "November 30, 2026" 
+---
+
+```{r, setup}
+#| label: setup
+#| message: false
+
+library(tidyverse)
+library(readr)
+library(dplyr)
+library(ggplot2)
+
+judgements <- read_csv("data/absolute_judgements.csv")
+respondents <- read_csv ("data/respondent_metadata.csv")
+```
+
+```{r, background}
+#| label: make-date
+
+# keep only the ratings for 'likely' so each person only has one row 
+likely <- judgements |>
+  filter(term == "Likely")
+
+# add the background information to the each person (ID)
+likely_id <- likely |>
+  left_join(respondents, by = "response_id")
+```

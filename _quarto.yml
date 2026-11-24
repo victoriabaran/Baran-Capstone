@@ -1,0 +1,11 @@
+project:
+  type: website
+  output-dir: docs
+  
+website:
+  title: "How Likely is 'Likely'?"
+  
+format:
+  html: 
+    theme: cosmo
+    toc: true 
