@@ -138,5 +138,64 @@ group_table <- rbind(edu_counts, eng_counts, age_counts) |>
 group_table |>
   gt() |>
   fmt_number(columns = Percent, decimals = 1) |>
-  tab_header(title = "Table 2. Sample Characterstics")
+  tab_header(title = "Table 2. Sample Characteristics")
+```
+```{r}
+#| label: fig-likely
+#| echo: false
+#| fig-cap: "Figure 1. Distrubtion of the probability particapnts assigned to 'Likely'."
+
+ggplot(likely_complete, aes(x = probability)) +
+  geom_histogram(binwidth = 5, colour = "white") +
+  labs(x = "Probability assigned to 'Likely' (%)",
+       y = "Number of particpants") +
+  theme_classic()
+```
+```{r, model_fit}
+#| label: models
+
+# null mode: everyone gets the same predicted rating (the mean)
+m0 <- glmmTMB(probability ~1,
+              data = likely_complete,
+              family = gaussian(link = "identity"))
+
+# model 1: add presentation order 
+m1 <-glmmTMB(probability ~ order,
+             data = likely_complete,
+             family = gaussian(link = "identity"))
+
+# model 2: add the background variables
+m2 <- glmmTMB(probability ~ order + education + english + age,
+             data = likely_complete,
+             family = gaussian(link = "identity"))
+```
+
+```{r, comparison}
+#| label: model-comparison
+
+# likelihood-ratio tests: does each step up on the models improve the model?
+model_tests <- anova(m0, m1, m2)
+model_tests
+```
+```{r, comparison}
+#| label: fit-table
+#| echo: false
+
+# pull the fit stastics for each model 
+fit0 <- glance(m0) |> 
+  mutate(Model = "M0: Null")
+fit1 <- glance(m1) |>
+  mutate(Model = "M1: Order")
+fit2 <- glance(m2) |>
+  mutate(Model = "M2: Order + Background")
+
+# stack them and keep the columns we want to report
+fit_table <- rbind(fit0, fit1, fit2) |>
+  select(Model, AIC, BIC, logLik)
+
+fit_table |>
+  gt() |>
+  fmt_number(column = c(AIC, BIC, logLik), decimals = 1) |>
+  tab_header(title = "Table 3. Model Fit Comparison") |>
+  tab_source_note("Lower AIC and BIC indicate better fit.")
 ```
