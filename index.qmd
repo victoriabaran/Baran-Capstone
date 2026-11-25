@@ -12,6 +12,7 @@ library(tidyverse)
 library(readr)
 library(dplyr)
 library(ggplot2)
+library(gt)
 
 judgements <- read_csv("data/absolute_judgements.csv")
 respondents <- read_csv ("data/respondent_metadata.csv")
@@ -27,4 +28,115 @@ likely <- judgements |>
 # add the background information to the each person (ID)
 likely_id <- likely |>
   left_join(respondents, by = "response_id")
+```
+
+```{r, combine_groups}
+#| label: recode
+
+likely_clean <- likely_id |>
+  mutate(
+    #combing small sample of education groups 
+    education = case_when(
+      education_level %in% c("Less than high school", "High school", "Some college") ~ "No degree",
+      education_level == "Bachelor" ~ "Bachelor",
+      education_level == "Postgraduate" ~ "Postgraduate"
+    ),
+    #combine the two non-native english speaking groups 
+    english = case_when(
+      english_background == "English is my first language" ~ "First language",
+      english_background %in% c("English is not my first language but I am fluent",
+                                "English is not my first language and I am not fluent") ~ "Not first language"
+    ), 
+    #combine the smallest age groups at each end
+    age = case_when(
+      age_band %in% c("Under 18", "18-24") ~ "Under 25",
+      age_band %in% c("65-74", "75+") ~ "65+",
+      TRUE ~ age_band
+    )
+  )
+```
+
+```{r,reference_group}
+
+#set the order of the groups, making the first group the reference group
+likely_clean <- likely_clean |>
+  mutate(
+    education = factor(education, levels = c("No degree", "Bachelor", "Postgraduate")),
+    english = factor(english, levels = c("First language", "Not first language")),
+    age = factor(age, levels = c("Under 25", "25-34", "35-44", "45-54", "55-64", "65+"))
+  )
+```
+
+```{r, missing_cases}
+#| level: complete-cases
+
+#keep only people who answer all of the three background questions, leading all the models to have the same number of people 
+likely_complete <- likely_clean |>
+  filter(!is.na(education), !is.na(english), !is.na(age))
+```
+
+```{r, descriptives}
+#| label: table-numeric
+#| echo: false
+
+# summary stastics for the outcome
+prob_desc <- likely_complete |>
+  summarise(
+    Variable = "Probability assigned to `Likely'",
+    N = n(),
+    Mean = mean(probability),
+    SD = sd(probability),
+    Min = min(probability),
+    Max = max(probability)
+    )
+
+#summary statistics for the order the phrase was shown in 
+order_desc <- likely_complete |>
+  summarise(
+    Variable = "Presentation order",
+    N = n(),
+    Mean = mean(order),
+    SD = sd(order),
+    Min = min(order),
+    Max = max(order)
+  )
+
+# stack the two rows into one table 
+numeric_table <- rbind(prob_desc, order_desc)
+
+numeric_table |>
+  gt() |>
+  fmt_number(columns = c(Mean, SD), decimals = 2) |>
+  tab_header(title = "Table 1. Descriptive Statistics for Numeric Variables")
+```
+```{r}
+#| label: table-groups
+#| echo: false
+
+#number and percent of people in each education group 
+edu_counts <- likely_complete |>
+  count(education) |>
+  mutate(Percent = n/ sum(n) * 100, Variable = "Education") |>
+  rename(Group = education)
+
+#number and percent of people in each english group 
+eng_counts <- likely_complete |>
+  count(english) |>
+  mutate(Percent = n/ sum(n) * 100, Variable = "English") |>
+  rename(Group = english)
+
+# number and percent of people in each age group 
+age_counts <- likely_complete |>
+  count(age) |>
+  mutate(Percent = n/ sum(n) * 100, Variable = "Age") |>
+  rename(Group = age)
+
+# stack them into one table, with the variable column first
+group_table <- rbind(edu_counts, eng_counts, age_counts) |>
+  select(Variable, Group, n, Percent)
+
+group_table |>
+  gt() |>
+  fmt_number(columns = Percent, decimals = 1) |>
+  tab_header(title = "Table 2. Sample Characterstics")
 ```
