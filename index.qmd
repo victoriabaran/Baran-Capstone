@@ -3,6 +3,7 @@ title: "How Likely Is 'Likely'?"
 author: "Victoria Baran"
 date: "November 30, 2026" 
 ---
+## Introduction
 
 ```{r, setup}
 #| label: setup
@@ -13,10 +14,40 @@ library(readr)
 library(dplyr)
 library(ggplot2)
 library(gt)
+library(ggeffects)
+library(glmmTMB)
+library(broom)
+library(broom.mixed)
+library(DHARMa)
+library(performance)
 
 judgements <- read_csv("data/absolute_judgements.csv")
 respondents <- read_csv ("data/respondent_metadata.csv")
 ```
+
+## Methods
+
+### Data Source and Participants 
+
+The data came from an online quiz created by Adam Kucharski as an independent project, and the dataset was accessed through TidyTuesday (2026-03-10 release, curated by Nicole Rennie). In the quiz, participants were shown common probability phrases, such as “likely”, “unlikely”, and “almost certain”, and asked to give the probability (from 0 to 100%) that each phrase represents. More than 5,000 individuals took part (n = 5,174), with each person rating all 19 probability phrases, shown in a random order. Participants also answered options questions about their background, including their age, English language background, and education level. The data were anonymous, with each individual represented only by an ID number, so each row in the analysis represents one person.
+
+### Measures
+
+The outcome was the probability (from 0 to 100) each person assigned to the phrase “Likely”; only this phrase was examined. Four predictor variables were used: presentation order, education, English language background, and age. The phrase “Likely” was presented at random position between 1 and 19 for each participant. Because eahc participant received a random order, random presentation order allowed us to test whether the phrases preceding ‘Likely’ influenced its rating. Education was the person’s highest education level, with five categories (less than highschool, highschool, some college, bachelor’s degree, and postgraduate degree). English language background described whether English was the persons first language, with three categories (first language; not first language but fluent, not first language and not fluent_. Age was measured using eight age bands, ranging from under 18 to 75 and older. 
+
+### Data Preperation and Missing Data
+
+Several data preparation decisions were made before analysis. In the original data, each participant had a separate row for each of the 19 phrases, resulting in 19 rows per person. Since regression assumes that each row represents an independent observation, treating these rows as separate people would violate this assumption. Therefore, only the ratings for “Likely” were retained, resulting in one row per participant. Participants’ background information, which was stored in a separate file, was then joined to their ratings using their ID number. 
+
+Some background categories contained very few participants, which can produce unstable estimates. To avoid this, small groups were combined. For education, “less than high school”, “high school”, and “some college” were combined into “no degree”. For English language background, the two non-native groups were combined into “not first language”. For age, “under 18” and “18-24” were combined into “under 25”, and “65-74” and “75+” were combined nto “65+”. The reference groups for all models were no degree, English as a first language, and under 25. 
+
+Participants who completed the phrase ratings but skipped at least one background question were treated as missing data. In total, 694 participants (13.4%) were missing at least one background variable and were excluded, so that all models were fit to the same participants and could be compared fairly. The final sample included 4,480 participants. Extreme ratings (very high or very low) were retained because they represents genuine reponses rather than errors. 
+
+### Analytical Strategy 
+
+All analyses were conducted in R using the glmmTMB package. Linear regression models (Gaussian family with identity link) were used because the outcome was a continuous rating on a scale of 0 to 100, rather than binary or count response. Three nested models were fit, each building on the previous one. The null model (M0) contained no predictors and estimated only the average rating. Model 1(M1) added presentation order, and Model 2 (M2) added education, English language background, and age. This sequence was chosen to test whether presentation order predicted ratings, and then whether background characteristics improved prediction beyond order. Models were compared using likelihood-ration tests, along with the Akaike Information Criterion (AIC) and Bayesian information criterions (BIC), where lower values indicate better fit. Model assumptions were assessed using simulated residuants from DHARMa package and multicollinearity was assessed using variance inflation factors (VIFs). Parameters estimated from M2 are reported with 95% confidence intervals, and statistical significance was emulated at ɑ= .05
+
+
 
 ```{r, background}
 #| label: make-date
@@ -74,6 +105,12 @@ likely_clean <- likely_clean |>
 likely_complete <- likely_clean |>
   filter(!is.na(education), !is.na(english), !is.na(age))
 ```
+
+## Results
+
+### Descritpive Statistics
+
+After excluding participants who did not respond to all background questions, the final sample included `r nrow(likely_complete)` participants (see Table 2). On average, participants rated the probability of an event occurring when “Likely” was used as the descriptor as  `r round(mean(likely_complete$probability), 2)% (SD = r round(sd(likely_complete$probability), 2)`; see Table 1). When compared to a scale of 0 to 100, the SD deviation is relatively small. This indicated that the interpretation of “Likely” was fairly consistent between participants. As shown in Figure 1, most ratings fell between 60% and 85%, with a peak between 70% and 80%, and the distribution was slightly negatively skewed, with a small number of participants giving a very low rating. The sample was highly educated, with most participants holding a postgraduate degree (See Table 2), and most reported English to be their first language. 
 
 ```{r, descriptives}
 #| label: table-numeric
@@ -146,11 +183,14 @@ group_table |>
 #| fig-cap: "Figure 1. Distrubtion of the probability particapnts assigned to 'Likely'."
 
 ggplot(likely_complete, aes(x = probability)) +
-  geom_histogram(binwidth = 5, colour = "white") +
+  geom_histogram(binwidth = 1) +
+  coord_cartesian(xlim = c(40, 100)) +
+  scale_x_continuous(breaks = seq(40, 100, by = 5))
   labs(x = "Probability assigned to 'Likely' (%)",
-       y = "Number of particpants") +
+       y = "Number of participants") +
   theme_classic()
 ```
+
 ```{r, model_fit}
 #| label: models
 
@@ -177,6 +217,10 @@ m2 <- glmmTMB(probability ~ order + education + english + age,
 model_tests <- anova(m0, m1, m2)
 model_tests
 ```
+### Model Comparison
+
+Nested models were compared using a likelihood-ratio test (see Table 3). The null model (M0), which contained only the average probability rating, served as a reference model. Placement of the term “Likely” was added to the model (M1), however, the `χ²(1) = r round(model_tests[2, "Chisq"], 2), p = r round(model_tests[2, "Pr(>Chisq)"], 3).` demonstrated that it did not significantly improve the model fit. Adding the background variables (M2) also did not significantly improve fit beyond order alone `χ²(r model_tests[3, "Chi Df"]) = r round(model_tests[3, "Chisq"], 2), p = r round(model_tests[3, "Pr(>Chisq)"], 3).` . Consistent with these results, both the AIC and BIC were lowest for the null model (AIC = `r round(fit_table$AIC[1], 1)) and highest for M2 (AIC = r round(fit_table$AIC[3], 1))`,. This indicates that the improvement in fit from adding the background variables did not offset the penalty of complexity. Thus, the null model was preferred. 
+
 ```{r, comparison}
 #| label: fit-table
 #| echo: false
@@ -199,3 +243,75 @@ fit_table |>
   tab_header(title = "Table 3. Model Fit Comparison") |>
   tab_source_note("Lower AIC and BIC indicate better fit.")
 ```
+
+### Model Diagnostics
+
+Model assumptions were assessed for M2 using simulated residuals from the DHARMa package (Figure 3), which compared the observed data with 500 datasets simulated from the fitted model. The dispersion test indicated that the spread of the observed data matched what the model expected (p = `r round(disp_test$p.value, 2)`). However, the uniformity (KS) test indicated that the observed residuals did not fully match the simulated distribution (*p* < .001), likely because most participants answered in multiples of 5 or 10 (see Figure 1). Comparing the outlier real answer to the simulated DHARMa responses, the outlier test was also significant  (*p* < .001), indicating more outliers than would be expected by chance; these responses were kept because they represent genuine answers rather than errors. The residual-versus-predicted plot showed approximately flat quantile lines, meaning the model did not over- or under- predict ratings across the predicted values. Because the large sample size makes the tests sensitive to even small differences in responses, these deviations were considered minor. Finally, all variance inflation factors were close to 1 (maximum VIF = `r round(max(vif_m2$VIF), 2)),`) indicating that the predictors were not strongly related ot one another. 
+
+```{r}
+#| label: diagnostics
+#| echo: false
+
+#simulate residuals from model 2 (seed so the results are the same for each render)
+set.seed(9041)
+res_m2 <- simulateResiduals(m2, n = 500, plot = FALSE)
+plot(res_m2)
+
+#check whether the predictors overlap too much with each other 
+check_collinearity(m2)
+
+# save each DHARMa test so the results can be in the test 
+disp_test <- testDispersion(res_m2, plot = FALSE)
+unif_test <- testUniformity(res_m2, plot = FALSE)
+out_test <- testOutliers(res_m2, plot = FALSE)
+
+vif_m2 <- check_collinearity(m2)
+```
+
+### Parameter Estimates
+
+Parameter estimated from M2 are presented in Table 4. Presentation order was not associated with ratings of “Likely” (*b* = `r round(b_order$estimate, 2)`, 95% CI [`r round(b_order$conf.low, 2), r round(b_order$conf.high, 2)`], *p* = `r round(b_order$p.value, 3)`); because the confidence interval included zero, there was no evidence that the position of the word played a role in the rating. Compared with participants without degree, participants with a bachelors degree (*b* = `r round(b_bach$estimate, 2`), 95% CI [`r round(b_bach$conf.low, 2), r round(b_bach$conf.high, 2)], p = r round(b_bach$p.value, 3)`) and a postgraduate degree (*b* = `r round(b_post$estimate, 2`), 95% CI [`r round(b_post$conf.low, 2), r round(b_post$conf.high, 2)`], *p* = `r round(b_post$p.value, 3)`) assigned slightly lower porbailities to “Likely”. Non-native Enlgish speakers did not differ significantly from native speaker (*b* = `r round(b_eng$estimate, 2`), 95% CI [`r round(b_eng$conf.low, 2), r round(b_eng$conf.high, 2)`], *p* = `r round(b_eng$p.value, 3)`).  All older age groups gave slightly higher ratings that participants under 25, but only the 45-54 group differed significantly (*b* = `r round(b_age45$estimate, 2`), 95% CI [`r round(b_age45$conf.low, 2), r round(b_age45$conf.high, 2)], p = r round(b_age45$p.value, 3)`). As shown in Figure 2, predicted ratings were `r round(pred_edu$predicted[1], 1)`% for participants without a degree, `r round(pred_edu$predicted[2], 1)`% for those with a bachelor's degree, and `r round(pred_edu$predicted[3], 1`)% for those with a postgraduate degree. However, these differences wre small, only manifesting as a 2 point difference in a 100-point scale. As previously shown the background variables grouped di not significantly improve model fit; therefore, these individual effects are not to be taken as consequential. 
+
+
+```{r, coef_table}
+#| label: coef-table
+#| echo: false
+
+#estimates, confidence intervals, and p-value for model 2
+coef_table <- tidy(m2, conf.int = TRUE) |>
+  filter(effect == "fixed", component == "cond") |>
+  select(term, estimate, std.error, conf.low, conf.high, p.value)
+
+coef_table |>
+  gt() |>
+  cols_label(term = "Term", estimate = "Estimate", std.error = "SE",
+             conf.low = "95% CI Lower", conf.high = "95% CI Upper",
+             p.value = "p") |>
+  fmt_number(columns = c(estimate, std.error, conf.low, conf.high), decimals = 2) |>
+  fmt(columns = p.value, fns = function(x) scales::pvalue(x, accuracy = 0.001)) |>
+  tab_header(title = "Table 4. Linear Regression Predicting the Probability Assigned to 'Likely'") |>
+  tab_source_note("Reference groups: No degree, English as first language, Under 25")
+
+b_order <- coef_table |> filter(term == "order")
+b_bach <- coef_table |> filter(term == "educationBachelor")
+b_post <- coef_table |> filter(term == "educationPostgraduate")
+b_eng <- coef_table |> filter(term == "englishNot first language")
+b_age45 <- coef_table |> filter(term == "age 45-50")
+```
+```{r, pred_edu}
+#| label: fig_education
+#| echo: false
+#| fig-cap: "Figure 2. Predicted probability assinged to 'Likely' by education level, with 95% confidence intervals (from Model 2)"
+
+# model 2 predicted rating for each education group
+pred_edu <- ggpredict(m2, terms = "education")
+
+plot(pred_edu) +
+  coord_cartesian(ylim = c(60, 80)) +
+  labs(title = NULL,
+       x = "Education level",
+       y = "Predicted probability for 'Likely' (%)") +
+  theme_classic()
+```
+
+## Discussion
