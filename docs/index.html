@@ -1,0 +1,2900 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
+
+<meta charset="utf-8">
+<meta name="generator" content="quarto-1.10.18">
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+
+<meta name="author" content="Victoria Baran">
+<meta name="dcterms.date" content="2026-11-30">
+
+<title>How Likely Is ‘Likely’? – How Likely is 'Likely'?</title>
+<style>
+/* Default styles provided by pandoc.
+** See https://pandoc.org/MANUAL.html#variables-for-html for config info.
+*/
+span.smallcaps{font-variant: small-caps;}
+div.columns{display: flex; gap: 1.5em;}
+div.column{flex: auto;}
+@media screen {
+div.columns{gap: min(4vw, 1.5em);}
+div.column{overflow-x: auto;}
+}
+div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+ul.task-list{list-style: none;}
+ul.task-list li input[type="checkbox"] {
+  width: 0.8em;
+  margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
+  vertical-align: middle;
+}
+/* CSS for syntax highlighting */
+html { -webkit-text-size-adjust: 100%; }
+pre > code.sourceCode { white-space: pre; position: relative; }
+pre > code.sourceCode > span { display: inline-block; line-height: 1.25; }
+pre > code.sourceCode > span:empty { height: 1.2em; }
+.sourceCode { overflow: visible; }
+code.sourceCode > span { color: inherit; text-decoration: inherit; }
+div.sourceCode { margin: 1em 0; }
+pre.sourceCode { margin: 0; }
+@media screen {
+div.sourceCode { overflow: auto; }
+}
+@media print {
+pre > code.sourceCode { white-space: pre-wrap; }
+pre > code.sourceCode > span { text-indent: -5em; padding-left: 5em; }
+}
+pre.numberSource code
+  { counter-reset: source-line 0; }
+pre.numberSource code > span
+  { position: relative; left: -4em; counter-increment: source-line; }
+pre.numberSource code > span > a:first-child::before
+  { content: counter(source-line);
+    position: relative; left: -1em; text-align: right; vertical-align: baseline;
+    border: none; display: inline-block;
+    -webkit-touch-callout: none; -webkit-user-select: none;
+    -khtml-user-select: none; -moz-user-select: none;
+    -ms-user-select: none; user-select: none;
+    padding: 0 4px; width: 4em;
+  }
+pre.numberSource { margin-left: 3em;  padding-left: 4px; }
+div.sourceCode
+  {   }
+@media screen {
+pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
+}
+</style>
+
+
+<script src="site_libs/quarto-nav/quarto-nav.js"></script>
+<script src="site_libs/clipboard/clipboard.min.js"></script>
+<script src="site_libs/quarto-search/autocomplete.umd.js"></script>
+<script src="site_libs/quarto-search/fuse.min.js"></script>
+<script src="site_libs/quarto-search/quarto-search.js"></script>
+<meta name="quarto:offset" content="./">
+<script src="site_libs/quarto-html/quarto.js" type="module"></script>
+<script src="site_libs/quarto-html/tabsets/tabsets.js" type="module"></script>
+<script src="site_libs/quarto-html/popper.min.js"></script>
+<script src="site_libs/quarto-html/tippy.umd.min.js"></script>
+<script src="site_libs/quarto-html/anchor.min.js"></script>
+<link href="site_libs/quarto-html/tippy.css" rel="stylesheet">
+<link href="site_libs/quarto-html/quarto-syntax-highlighting-64a204ab8560d761af7679ceaba22944.css" rel="stylesheet" id="quarto-text-highlighting-styles">
+<script src="site_libs/bootstrap/bootstrap.min.js"></script>
+<link href="site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
+<link href="site_libs/bootstrap/bootstrap-445b8638c3d06994fee0907d791121c4.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
+<script id="quarto-search-options" type="application/json">{
+  "location": "sidebar",
+  "copy-button": false,
+  "collapse-after": 3,
+  "panel-placement": "start",
+  "type": "textbox",
+  "limit": 50,
+  "keyboard-shortcut": [
+    "f",
+    "/",
+    "s"
+  ],
+  "show-item-context": false,
+  "language": {
+    "search-no-results-text": "No results",
+    "search-matching-documents-text": "matching documents",
+    "search-copy-link-title": "Copy link to search",
+    "search-hide-matches-text": "Hide additional matches",
+    "search-more-match-text": "more match in this document",
+    "search-more-matches-text": "more matches in this document",
+    "search-clear-button-title": "Clear",
+    "search-text-placeholder": "",
+    "search-detached-cancel-button-title": "Cancel",
+    "search-submit-button-title": "Submit",
+    "search-label": "Search"
+  }
+}</script>
+
+
+</head>
+
+<body class="quarto-light">
+
+<div id="quarto-search-results"></div>
+<!-- content -->
+<div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article">
+<!-- sidebar -->
+<!-- margin-sidebar -->
+    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
+        <nav id="TOC" role="doc-toc" class="toc-active">
+    <h2 id="toc-title">On this page</h2>
+   
+  <ul>
+  <li><a href="#introduction" id="toc-introduction" class="nav-link active" data-scroll-target="#introduction">Introduction</a></li>
+  <li><a href="#methods" id="toc-methods" class="nav-link" data-scroll-target="#methods">Methods</a>
+  <ul class="collapse">
+  <li><a href="#data-source-and-participants" id="toc-data-source-and-participants" class="nav-link" data-scroll-target="#data-source-and-participants">Data Source and Participants</a></li>
+  <li><a href="#measures" id="toc-measures" class="nav-link" data-scroll-target="#measures">Measures</a></li>
+  <li><a href="#data-preperation-and-missing-data" id="toc-data-preperation-and-missing-data" class="nav-link" data-scroll-target="#data-preperation-and-missing-data">Data Preperation and Missing Data</a></li>
+  <li><a href="#analytical-strategy-and-rationale" id="toc-analytical-strategy-and-rationale" class="nav-link" data-scroll-target="#analytical-strategy-and-rationale">Analytical Strategy and Rationale</a></li>
+  </ul></li>
+  <li><a href="#results" id="toc-results" class="nav-link" data-scroll-target="#results">Results</a>
+  <ul class="collapse">
+  <li><a href="#descritpive-statistics" id="toc-descritpive-statistics" class="nav-link" data-scroll-target="#descritpive-statistics">Descritpive Statistics</a></li>
+  <li><a href="#model-comparison" id="toc-model-comparison" class="nav-link" data-scroll-target="#model-comparison">Model Comparison</a></li>
+  <li><a href="#model-diagnostics" id="toc-model-diagnostics" class="nav-link" data-scroll-target="#model-diagnostics">Model Diagnostics</a></li>
+  <li><a href="#parameter-estimates" id="toc-parameter-estimates" class="nav-link" data-scroll-target="#parameter-estimates">Parameter Estimates</a></li>
+  </ul></li>
+  <li><a href="#discussion" id="toc-discussion" class="nav-link" data-scroll-target="#discussion">Discussion</a></li>
+  </ul>
+</nav>
+    </div>
+<!-- main -->
+<main class="content" id="quarto-document-content">
+
+<header id="title-block-header" class="quarto-title-block default">
+<div class="quarto-title">
+<h1 class="title">How Likely Is ‘Likely’?</h1>
+</div>
+
+
+
+<div class="quarto-title-meta">
+
+    <div>
+    <div class="quarto-title-meta-heading">Author</div>
+    <div class="quarto-title-meta-contents">
+             <p>Victoria Baran </p>
+          </div>
+  </div>
+    
+    <div>
+    <div class="quarto-title-meta-heading">Published</div>
+    <div class="quarto-title-meta-contents">
+      <p class="date">November 30, 2026</p>
+    </div>
+  </div>
+  
+    
+  </div>
+  
+
+
+</header>
+
+
+<section id="introduction" class="level2">
+<h2 class="anchored" data-anchor-id="introduction">Introduction</h2>
+<p>Words such as “likely”, “unlikely”, and “probable” are common in everyday language, used in settings ranging from casual predictions among friends to weather forecasts and medical advice. These terms are meant to communicate how probable an outcome is, yet because they are so familiar, speakers rarely define what they mean. It is less clear whether people share the same understanding of these terms, or whether different listeners picture different probabilities when they hear the same word, which could lead to miscommunication. This question is also relevant to psychology, where survey research often relies on Likert-type rating scales with verbal labels such as “likely” and “unlikely”. The present analysis therefore asks: Do a person’s background and the order in which they saw the phrase predict the probability they assign to “likely”?</p>
+<p>The data came from an online quiz created by Adam Kucharski, in which participants assigned a probability from 0 to 100 to each of 19 phrases presented in a random order (Kucharski, 2026). The data were later shared through TidyTuesday, a weekly community that uploads data projects on GitHub. To address the research question, this analysis will focus only on the ratings for the term “likely,” along with the order in which participants saw it and their age, English language background, and education. Because order was randomly assigned, it was not expected to influence ratings, whereas background characteristics might plausibly shape how people interpret the term.</p>
+<p>Both presentation order and background characteristics may shape how people interpret “likely.” Order may be especially influential, because people often judge information by comparing it with what surrounds it. For example, a product may seem expensive on its own but cheap once it is placed next to a similar product that costs twice as much. In the same way, the phrases a participant sees before “Likely” may make it seem stronger or weaker by comparison. Background characteristics may also play a role. People with different levels of education may be familiar with different ranges of vocabulary, which could affect how finely they distinguish between probability terms. Similarly, participants whose first language is not English may use these terms less often and may group “Likely” with other positive terms such as “probable”, potentially leading to higher ratings. Finally, age may matter because different generations may use these terms differently.</p>
+<div class="cell">
+<details class="code-fold">
+<summary>Code</summary>
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb1"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(readr)</span>
+<span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(dplyr)</span>
+<span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(ggplot2)</span>
+<span id="cb1-4"><a href="#cb1-4" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(gt)</span>
+<span id="cb1-5"><a href="#cb1-5" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(ggeffects)</span>
+<span id="cb1-6"><a href="#cb1-6" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(glmmTMB)</span>
+<span id="cb1-7"><a href="#cb1-7" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(broom)</span>
+<span id="cb1-8"><a href="#cb1-8" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(broom.mixed)</span>
+<span id="cb1-9"><a href="#cb1-9" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(DHARMa)</span>
+<span id="cb1-10"><a href="#cb1-10" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(performance)</span>
+<span id="cb1-11"><a href="#cb1-11" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-12"><a href="#cb1-12" aria-hidden="true" tabindex="-1"></a>judgements <span class="ot">&lt;-</span> <span class="fu">read_csv</span>(<span class="st">"data/absolute_judgements.csv"</span>)</span>
+<span id="cb1-13"><a href="#cb1-13" aria-hidden="true" tabindex="-1"></a>respondents <span class="ot">&lt;-</span> <span class="fu">read_csv</span> (<span class="st">"data/respondent_metadata.csv"</span>)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+</details>
+</div>
+</section>
+<section id="methods" class="level2">
+<h2 class="anchored" data-anchor-id="methods">Methods</h2>
+<section id="data-source-and-participants" class="level3">
+<h3 class="anchored" data-anchor-id="data-source-and-participants">Data Source and Participants</h3>
+<p>The data came from an online quiz created by Adam Kucharski as an independent project, and the dataset was accessed through TidyTuesday (2026-03-10 release, curated by Nicole Rennie). In the quiz, participants were shown common probability phrases, such as “likely”, “unlikely”, and “almost certain”, and asked to give the probability (from 0 to 100%) that each phrase represents. More than 5,000 individuals took part (n = 5,174), with each person rating all 19 probability phrases, shown in a random order. Participants also answered optional questions about their background, including their age, English language background, and education level. The data was collected anonymously, with each individual represented only by an ID number, so each row in the analysis represents one person.</p>
+</section>
+<section id="measures" class="level3">
+<h3 class="anchored" data-anchor-id="measures">Measures</h3>
+<p>The outcome was the probability (from 0 to 100) each person assigned to the phrase “Likely”; out of the 19 phrases, this was only the only outcome examined. Four predictor variables were used: presentation order, education, English language background, and age. Throughout the questionnaire, each participant was presented with the phrase “Likely” at random positions between 1 and 19. Due to this, we were able to test whether the phrase preceding “Likely” influenced its rating. Education, English language, and Age were grouped into a background predictor. Education was the person’s highest education level, with five categories (less than highschool, highschool, some college, bachelor’s degree, and postgraduate degree). English language background described whether English was the persons first language, with three categories (first language; not first language but fluent, not first language and not fluent_. Age was measured using eight age bands, ranging from under 18 to 75 and older.</p>
+</section>
+<section id="data-preperation-and-missing-data" class="level3">
+<h3 class="anchored" data-anchor-id="data-preperation-and-missing-data">Data Preperation and Missing Data</h3>
+<p>Several data preparation decisions were made before analysis. In the original data, each participant had a separate row for each of the 19 phrases, resulting in 19 rows per person.Since regressions assume that each row represents and independent observation, continuing with data analysis understanding this assumption would lead to incorrect results.Therefore, only the ratings for “Likely” were retained, resulting in one row per participant. To join the different predictors, participants’ background information, which was stored in a separate file, was then joined to their ratings using their ID number.</p>
+<p>Another set of data preperation consisted of combing participant categories. Some background categories contained very few participants, which can produce unstable estimates. To avoid this, small groups were combined. For education, “less than high school”, “high school”, and “some college” were combined into “no degree”. For English language background, the two non-native groups were combined into “not first language”. For age, “under 18” and “18-24” were combined into “under 25”, and “65-74” and “75+” were combined nto “65+”. The reference groups for all models were no degree, English as a first language, and under 25.</p>
+<p>Participants who completed the phrase ratings but skipped at least one background question were treated as missing data. In total, 694 participants (13.4%) were missing at least one background variable and were excluded, so that all models were fit to the same participants and could be compared fairly. The final sample included 4,480 participants. Extreme ratings (very high or very low) were retained because they represents genuine reponses rather than errors.</p>
+</section>
+<section id="analytical-strategy-and-rationale" class="level3">
+<h3 class="anchored" data-anchor-id="analytical-strategy-and-rationale">Analytical Strategy and Rationale</h3>
+<table class="caption-top table">
+<caption>Table 3. Candidate models</caption>
+<colgroup>
+<col style="width: 33%">
+<col style="width: 33%">
+<col style="width: 33%">
+</colgroup>
+<thead>
+<tr class="header">
+<th style="text-align: left;">Model</th>
+<th style="text-align: left;">Predictors</th>
+<th style="text-align: left;">Purpose</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td style="text-align: left;">M0: Null</td>
+<td style="text-align: left;">Intercept Only</td>
+<td style="text-align: left;">Reference model</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">M1: + Order</td>
+<td style="text-align: left;">Presentation Order</td>
+<td style="text-align: left;">Used to evaluate whether the presentation of “Likely” plays a role in it’s rating</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">M2: + Background</td>
+<td style="text-align: left;">Presentation Order + Education + English Background + Age</td>
+<td style="text-align: left;">Evaluated whether the addition of background characteristics improves prediction</td>
+</tr>
+</tbody>
+</table>
+<p>All analyses were conducted in R using the glmmTMB package. Linear regression models (Gaussian family with identity link) were used because the outcome was a continuous rating on a scale of 0 to 100, rather than binary or count response. However, it is important to note that the data contained both numeric and categorical data, since the outcome is based on a 0 to 100 scale, as well as presentation order (1 to 19). Alternatively, all background data is categorical. Due to this, there will be two different descritpive tables (see Table 1 and Table 2) to demonstrate the different variables.</p>
+<p>Three nested models were fit, each building on the previous one. The null model (M0) contained no predictors and estimated only the average rating. Model 1 (M1) added presentation order, and Model 2 (M2) added education, English language background, and age. This specific sequence was chosen to test whether presentation order predicted ratings, and then whether background factors improved prediction beyond order. Presentation order was fit into the first model since it is randomly assigned among participants. The remaining background variables were added as a secondary analysis since those provide contexts to participants decision Model assumptions were assessed using simulated residuals from DHARMa package and multicollinearity was assessed using variance inflation factors (VIFs). Models were compared using likelihood-ration tests, along with the Akaike Information Criterion (AIC) and Bayesian information criterions (BIC), where lower values indicate better fit. Parameters estimated from M2 are reported with 95% confidence intervals, and statistical significance was emulated at ɑ= .05</p>
+<div class="cell">
+<details class="code-fold">
+<summary>Code</summary>
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb2"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a><span class="co"># keep only the ratings for 'likely' so each person only has one row </span></span>
+<span id="cb2-2"><a href="#cb2-2" aria-hidden="true" tabindex="-1"></a>likely <span class="ot">&lt;-</span> judgements <span class="sc">|&gt;</span></span>
+<span id="cb2-3"><a href="#cb2-3" aria-hidden="true" tabindex="-1"></a>  <span class="fu">filter</span>(term <span class="sc">==</span> <span class="st">"Likely"</span>)</span>
+<span id="cb2-4"><a href="#cb2-4" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb2-5"><a href="#cb2-5" aria-hidden="true" tabindex="-1"></a><span class="co"># add the background information to the each person (ID)</span></span>
+<span id="cb2-6"><a href="#cb2-6" aria-hidden="true" tabindex="-1"></a>likely_id <span class="ot">&lt;-</span> likely <span class="sc">|&gt;</span></span>
+<span id="cb2-7"><a href="#cb2-7" aria-hidden="true" tabindex="-1"></a>  <span class="fu">left_join</span>(respondents, <span class="at">by =</span> <span class="st">"response_id"</span>)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+</details>
+</div>
+<div class="cell">
+<details class="code-fold">
+<summary>Code</summary>
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb3"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a>likely_clean <span class="ot">&lt;-</span> likely_id <span class="sc">|&gt;</span></span>
+<span id="cb3-2"><a href="#cb3-2" aria-hidden="true" tabindex="-1"></a>  <span class="fu">mutate</span>(</span>
+<span id="cb3-3"><a href="#cb3-3" aria-hidden="true" tabindex="-1"></a>    <span class="co">#combing small sample of education groups </span></span>
+<span id="cb3-4"><a href="#cb3-4" aria-hidden="true" tabindex="-1"></a>    <span class="at">education =</span> <span class="fu">case_when</span>(</span>
+<span id="cb3-5"><a href="#cb3-5" aria-hidden="true" tabindex="-1"></a>      education_level <span class="sc">%in%</span> <span class="fu">c</span>(<span class="st">"Less than high school"</span>, <span class="st">"High school"</span>, <span class="st">"Some college"</span>) <span class="sc">~</span> <span class="st">"No degree"</span>,</span>
+<span id="cb3-6"><a href="#cb3-6" aria-hidden="true" tabindex="-1"></a>      education_level <span class="sc">==</span> <span class="st">"Bachelor"</span> <span class="sc">~</span> <span class="st">"Bachelor"</span>,</span>
+<span id="cb3-7"><a href="#cb3-7" aria-hidden="true" tabindex="-1"></a>      education_level <span class="sc">==</span> <span class="st">"Postgraduate"</span> <span class="sc">~</span> <span class="st">"Postgraduate"</span></span>
+<span id="cb3-8"><a href="#cb3-8" aria-hidden="true" tabindex="-1"></a>    ),</span>
+<span id="cb3-9"><a href="#cb3-9" aria-hidden="true" tabindex="-1"></a>    <span class="co">#combine the two non-native english speaking groups </span></span>
+<span id="cb3-10"><a href="#cb3-10" aria-hidden="true" tabindex="-1"></a>    <span class="at">english =</span> <span class="fu">case_when</span>(</span>
+<span id="cb3-11"><a href="#cb3-11" aria-hidden="true" tabindex="-1"></a>      english_background <span class="sc">==</span> <span class="st">"English is my first language"</span> <span class="sc">~</span> <span class="st">"First language"</span>,</span>
+<span id="cb3-12"><a href="#cb3-12" aria-hidden="true" tabindex="-1"></a>      english_background <span class="sc">%in%</span> <span class="fu">c</span>(<span class="st">"English is not my first language but I am fluent"</span>,</span>
+<span id="cb3-13"><a href="#cb3-13" aria-hidden="true" tabindex="-1"></a>                                <span class="st">"English is not my first language and I am not fluent"</span>) <span class="sc">~</span> <span class="st">"Not first language"</span></span>
+<span id="cb3-14"><a href="#cb3-14" aria-hidden="true" tabindex="-1"></a>    ), </span>
+<span id="cb3-15"><a href="#cb3-15" aria-hidden="true" tabindex="-1"></a>    <span class="co">#combine the smallest age groups at each end</span></span>
+<span id="cb3-16"><a href="#cb3-16" aria-hidden="true" tabindex="-1"></a>    <span class="at">age =</span> <span class="fu">case_when</span>(</span>
+<span id="cb3-17"><a href="#cb3-17" aria-hidden="true" tabindex="-1"></a>      age_band <span class="sc">%in%</span> <span class="fu">c</span>(<span class="st">"Under 18"</span>, <span class="st">"18-24"</span>) <span class="sc">~</span> <span class="st">"Under 25"</span>,</span>
+<span id="cb3-18"><a href="#cb3-18" aria-hidden="true" tabindex="-1"></a>      age_band <span class="sc">%in%</span> <span class="fu">c</span>(<span class="st">"65-74"</span>, <span class="st">"75+"</span>) <span class="sc">~</span> <span class="st">"65+"</span>,</span>
+<span id="cb3-19"><a href="#cb3-19" aria-hidden="true" tabindex="-1"></a>      <span class="cn">TRUE</span> <span class="sc">~</span> age_band</span>
+<span id="cb3-20"><a href="#cb3-20" aria-hidden="true" tabindex="-1"></a>    )</span>
+<span id="cb3-21"><a href="#cb3-21" aria-hidden="true" tabindex="-1"></a>  )</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+</details>
+</div>
+<div class="cell">
+<details class="code-fold">
+<summary>Code</summary>
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb4"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb4-1"><a href="#cb4-1" aria-hidden="true" tabindex="-1"></a><span class="co">#set the order of the groups, making the first group the reference group</span></span>
+<span id="cb4-2"><a href="#cb4-2" aria-hidden="true" tabindex="-1"></a>likely_clean <span class="ot">&lt;-</span> likely_clean <span class="sc">|&gt;</span></span>
+<span id="cb4-3"><a href="#cb4-3" aria-hidden="true" tabindex="-1"></a>  <span class="fu">mutate</span>(</span>
+<span id="cb4-4"><a href="#cb4-4" aria-hidden="true" tabindex="-1"></a>    <span class="at">education =</span> <span class="fu">factor</span>(education, <span class="at">levels =</span> <span class="fu">c</span>(<span class="st">"No degree"</span>, <span class="st">"Bachelor"</span>, <span class="st">"Postgraduate"</span>)),</span>
+<span id="cb4-5"><a href="#cb4-5" aria-hidden="true" tabindex="-1"></a>    <span class="at">english =</span> <span class="fu">factor</span>(english, <span class="at">levels =</span> <span class="fu">c</span>(<span class="st">"First language"</span>, <span class="st">"Not first language"</span>)),</span>
+<span id="cb4-6"><a href="#cb4-6" aria-hidden="true" tabindex="-1"></a>    <span class="at">age =</span> <span class="fu">factor</span>(age, <span class="at">levels =</span> <span class="fu">c</span>(<span class="st">"Under 25"</span>, <span class="st">"25-34"</span>, <span class="st">"35-44"</span>, <span class="st">"45-54"</span>, <span class="st">"55-64"</span>, <span class="st">"65+"</span>))</span>
+<span id="cb4-7"><a href="#cb4-7" aria-hidden="true" tabindex="-1"></a>  )</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+</details>
+</div>
+<div class="cell">
+<details class="code-fold">
+<summary>Code</summary>
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb5"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb5-1"><a href="#cb5-1" aria-hidden="true" tabindex="-1"></a><span class="co">#keep only people who answer all of the three background questions, leading all the models to have the same number of people </span></span>
+<span id="cb5-2"><a href="#cb5-2" aria-hidden="true" tabindex="-1"></a>likely_complete <span class="ot">&lt;-</span> likely_clean <span class="sc">|&gt;</span></span>
+<span id="cb5-3"><a href="#cb5-3" aria-hidden="true" tabindex="-1"></a>  <span class="fu">filter</span>(<span class="sc">!</span><span class="fu">is.na</span>(education), <span class="sc">!</span><span class="fu">is.na</span>(english), <span class="sc">!</span><span class="fu">is.na</span>(age))</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+</details>
+</div>
+</section>
+</section>
+<section id="results" class="level2">
+<h2 class="anchored" data-anchor-id="results">Results</h2>
+<section id="descritpive-statistics" class="level3">
+<h3 class="anchored" data-anchor-id="descritpive-statistics">Descritpive Statistics</h3>
+<p>After excluding participants who did not respond to all background questions, the final sample included 4480 participants (see Table 2). On average, participants rated the probability of an event occurring when “Likely” was used as the descriptor as 72.71% (SD = 10.09; see Table 1). When compared to a scale of 0 to 100, the SD deviation is relatively small. This indicated that the interpretation of “Likely” was fairly consistent between participants. As shown in Figure 1, most ratings fell between 60% and 85%, with a peak between 70% and 80%, and the distribution was slightly negatively skewed, with a small number of participants giving a very low rating. The sample was highly educated, with most participants holding a postgraduate degree (See Table 2), and most reported English to be their first language.</p>
+<div class="cell">
+<div class="cell-output-display">
+<div id="iduvvmsqmi" style="padding-left:0px;padding-right:0px;padding-top:10px;padding-bottom:10px;overflow-x:auto;overflow-y:auto;width:auto;height:auto;">
+<style>#iduvvmsqmi table {
+  font-family: system-ui, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol', 'Noto Color Emoji';
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+#iduvvmsqmi thead, #iduvvmsqmi tbody, #iduvvmsqmi tfoot, #iduvvmsqmi tr, #iduvvmsqmi td, #iduvvmsqmi th {
+  border-style: none;
+}
+
+#iduvvmsqmi p {
+  margin: 0;
+  padding: 0;
+}
+
+#iduvvmsqmi .gt_table {
+  display: table;
+  border-collapse: collapse;
+  line-height: normal;
+  margin-left: auto;
+  margin-right: auto;
+  color: #333333;
+  font-size: 16px;
+  font-weight: normal;
+  font-style: normal;
+  background-color: #FFFFFF;
+  width: auto;
+  border-top-style: solid;
+  border-top-width: 2px;
+  border-top-color: #A8A8A8;
+  border-right-style: none;
+  border-right-width: 2px;
+  border-right-color: #D3D3D3;
+  border-bottom-style: solid;
+  border-bottom-width: 2px;
+  border-bottom-color: #A8A8A8;
+  border-left-style: none;
+  border-left-width: 2px;
+  border-left-color: #D3D3D3;
+}
+
+#iduvvmsqmi .gt_caption {
+  padding-top: 4px;
+  padding-bottom: 4px;
+}
+
+#iduvvmsqmi .gt_title {
+  color: #333333;
+  font-size: 125%;
+  font-weight: initial;
+  padding-top: 4px;
+  padding-bottom: 4px;
+  padding-left: 5px;
+  padding-right: 5px;
+  border-bottom-color: #FFFFFF;
+  border-bottom-width: 0;
+}
+
+#iduvvmsqmi .gt_subtitle {
+  color: #333333;
+  font-size: 85%;
+  font-weight: initial;
+  padding-top: 3px;
+  padding-bottom: 5px;
+  padding-left: 5px;
+  padding-right: 5px;
+  border-top-color: #FFFFFF;
+  border-top-width: 0;
+}
+
+#iduvvmsqmi .gt_heading {
+  background-color: #FFFFFF;
+  text-align: center;
+  border-bottom-color: #FFFFFF;
+  border-left-style: none;
+  border-left-width: 1px;
+  border-left-color: #D3D3D3;
+  border-right-style: none;
+  border-right-width: 1px;
+  border-right-color: #D3D3D3;
+}
+
+#iduvvmsqmi .gt_bottom_border {
+  border-bottom-style: solid;
+  border-bottom-width: 2px;
+  border-bottom-color: #D3D3D3;
+}
+
+#iduvvmsqmi .gt_col_headings {
+  border-top-style: solid;
+  border-top-width: 2px;
+  border-top-color: #D3D3D3;
+  border-bottom-style: solid;
+  border-bottom-width: 2px;
+  border-bottom-color: #D3D3D3;
+  border-left-style: none;
+  border-left-width: 1px;
+  border-left-color: #D3D3D3;
+  border-right-style: none;
+  border-right-width: 1px;
+  border-right-color: #D3D3D3;
+}
+
+#iduvvmsqmi .gt_col_heading {
+  color: #333333;
+  background-color: #FFFFFF;
+  font-size: 100%;
+  font-weight: normal;
+  text-transform: inherit;
+  border-left-style: none;
+  border-left-width: 1px;
+  border-left-color: #D3D3D3;
+  border-right-style: none;
+  border-right-width: 1px;
+  border-right-color: #D3D3D3;
+  vertical-align: bottom;
+  padding-top: 5px;
+  padding-bottom: 6px;
+  padding-left: 5px;
+  padding-right: 5px;
+  overflow-x: hidden;
+}
+
+#iduvvmsqmi .gt_column_spanner_outer {
+  color: #333333;
+  background-color: #FFFFFF;
+  font-size: 100%;
+  font-weight: normal;
+  text-transform: inherit;
+  padding-top: 0;
+  padding-bottom: 0;
+  padding-left: 4px;
+  padding-right: 4px;
+}
+
+#iduvvmsqmi .gt_column_spanner_outer:first-child {
+  padding-left: 0;
+}
+
+#iduvvmsqmi .gt_column_spanner_outer:last-child {
+  padding-right: 0;
+}
+
+#iduvvmsqmi .gt_column_spanner {
+  border-bottom-style: solid;
+  border-bottom-width: 2px;
+  border-bottom-color: #D3D3D3;
+  vertical-align: bottom;
+  padding-top: 5px;
+  padding-bottom: 5px;
+  overflow-x: hidden;
+  display: inline-block;
+  width: 100%;
+}
+
+#iduvvmsqmi .gt_spanner_row {
+  border-bottom-style: hidden;
+}
+
+#iduvvmsqmi .gt_group_heading {
+  padding-top: 8px;
+  padding-bottom: 8px;
+  padding-left: 5px;
+  padding-right: 5px;
+  color: #333333;
+  background-color: #FFFFFF;
+  font-size: 100%;
+  font-weight: initial;
+  text-transform: inherit;
+  border-top-style: solid;
+  border-top-width: 2px;
+  border-top-color: #D3D3D3;
+  border-bottom-style: solid;
+  border-bottom-width: 2px;
+  border-bottom-color: #D3D3D3;
+  border-left-style: none;
+  border-left-width: 1px;
+  border-left-color: #D3D3D3;
+  border-right-style: none;
+  border-right-width: 1px;
+  border-right-color: #D3D3D3;
+  vertical-align: middle;
+  text-align: left;
+}
+
+#iduvvmsqmi .gt_empty_group_heading {
+  padding: 0.5px;
+  color: #333333;
+  background-color: #FFFFFF;
+  font-size: 100%;
+  font-weight: initial;
+  border-top-style: solid;
+  border-top-width: 2px;
+  border-top-color: #D3D3D3;
+  border-bottom-style: solid;
+  border-bottom-width: 2px;
+  border-bottom-color: #D3D3D3;
+  vertical-align: middle;
+}
+
+#iduvvmsqmi .gt_from_md > :first-child {
+  margin-top: 0;
+}
+
+#iduvvmsqmi .gt_from_md > :last-child {
+  margin-bottom: 0;
+}
+
+#iduvvmsqmi .gt_row {
+  padding-top: 8px;
+  padding-bottom: 8px;
+  padding-left: 5px;
+  padding-right: 5px;
+  margin: 10px;
+  border-top-style: solid;
+  border-top-width: 1px;
+  border-top-color: #D3D3D3;
+  border-left-style: none;
+  border-left-width: 1px;
+  border-left-color: #D3D3D3;
+  border-right-style: none;
+  border-right-width: 1px;
+  border-right-color: #D3D3D3;
+  vertical-align: middle;
+  overflow-x: hidden;
+}
+
+#iduvvmsqmi .gt_stub {
+  color: #333333;
+  background-color: #FFFFFF;
+  font-size: 100%;
+  font-weight: initial;
+  text-transform: inherit;
+  border-right-style: solid;
+  border-right-width: 2px;
+  border-right-color: #D3D3D3;
+  padding-left: 5px;
+  padding-right: 5px;
+}
+
+#iduvvmsqmi .gt_stub_row_group {
+  color: #333333;
+  background-color: #FFFFFF;
+  font-size: 100%;
+  font-weight: initial;
+  text-transform: inherit;
+  border-right-style: solid;
+  border-right-width: 2px;
+  border-right-color: #D3D3D3;
+  padding-left: 5px;
+  padding-right: 5px;
+  vertical-align: top;
+}
+
+#iduvvmsqmi .gt_row_group_first td {
+  border-top-width: 2px;
+}
+
+#iduvvmsqmi .gt_row_group_first th {
+  border-top-width: 2px;
+}
+
+#iduvvmsqmi .gt_summary_row {
+  color: #333333;
+  background-color: #FFFFFF;
+  text-transform: inherit;
+  padding-top: 8px;
+  padding-bottom: 8px;
+  padding-left: 5px;
+  padding-right: 5px;
+}
+
+#iduvvmsqmi .gt_first_summary_row {
+  border-top-style: solid;
+  border-top-color: #D3D3D3;
+}
+
+#iduvvmsqmi .gt_first_summary_row.thick {
+  border-top-width: 2px;
+}
+
+#iduvvmsqmi .gt_last_summary_row {
+  padding-top: 8px;
+  padding-bottom: 8px;
+  padding-left: 5px;
+  padding-right: 5px;
+  border-bottom-style: solid;
+  border-bottom-width: 2px;
+  border-bottom-color: #D3D3D3;
+}
+
+#iduvvmsqmi .gt_grand_summary_row {
+  color: #333333;
+  background-color: #FFFFFF;
+  text-transform: inherit;
+  padding-top: 8px;
+  padding-bottom: 8px;
+  padding-left: 5px;
+  padding-right: 5px;
+}
+
+#iduvvmsqmi .gt_first_grand_summary_row {
+  padding-top: 8px;
+  padding-bottom: 8px;
+  padding-left: 5px;
+  padding-right: 5px;
+  border-top-style: double;
+  border-top-width: 6px;
+  border-top-color: #D3D3D3;
+}
+
+#iduvvmsqmi .gt_last_grand_summary_row_top {
+  padding-top: 8px;
+  padding-bottom: 8px;
+  padding-left: 5px;
+  padding-right: 5px;
+  border-bottom-style: double;
+  border-bottom-width: 6px;
+  border-bottom-color: #D3D3D3;
+}
+
+#iduvvmsqmi .gt_striped {
+  background-color: rgba(128, 128, 128, 0.05);
+}
+
+#iduvvmsqmi .gt_table_body {
+  border-top-style: solid;
+  border-top-width: 2px;
+  border-top-color: #D3D3D3;
+  border-bottom-style: solid;
+  border-bottom-width: 2px;
+  border-bottom-color: #D3D3D3;
+}
+
+#iduvvmsqmi .gt_footnotes {
+  color: #333333;
+  background-color: #FFFFFF;
+  border-bottom-style: none;
+  border-bottom-width: 2px;
+  border-bottom-color: #D3D3D3;
+  border-left-style: none;
+  border-left-width: 2px;
+  border-left-color: #D3D3D3;
+  border-right-style: none;
+  border-right-width: 2px;
+  border-right-color: #D3D3D3;
+}
+
+#iduvvmsqmi .gt_footnote {
+  margin: 0px;
+  font-size: 90%;
+  padding-top: 4px;
+  padding-bottom: 4px;
+  padding-left: 5px;
+  padding-right: 5px;
+}
+
+#iduvvmsqmi .gt_sourcenotes {
+  color: #333333;
+  background-color: #FFFFFF;
+  border-bottom-style: none;
+  border-bottom-width: 2px;
+  border-bottom-color: #D3D3D3;
+  border-left-style: none;
+  border-left-width: 2px;
+  border-left-color: #D3D3D3;
+  border-right-style: none;
+  border-right-width: 2px;
+  border-right-color: #D3D3D3;
+}
+
+#iduvvmsqmi .gt_sourcenote {
+  font-size: 90%;
+  padding-top: 4px;
+  padding-bottom: 4px;
+  padding-left: 5px;
+  padding-right: 5px;
+}
+
+#iduvvmsqmi .gt_left {
+  text-align: left;
+}
+
+#iduvvmsqmi .gt_center {
+  text-align: center;
+}
+
+#iduvvmsqmi .gt_right {
+  text-align: right;
+  font-variant-numeric: tabular-nums;
+}
+
+#iduvvmsqmi .gt_font_normal {
+  font-weight: normal;
+}
+
+#iduvvmsqmi .gt_font_bold {
+  font-weight: bold;
+}
+
+#iduvvmsqmi .gt_font_italic {
+  font-style: italic;
+}
+
+#iduvvmsqmi .gt_super {
+  font-size: 65%;
+}
+
+#iduvvmsqmi .gt_footnote_marks {
+  font-size: 75%;
+  vertical-align: 0.4em;
+  position: initial;
+}
+
+#iduvvmsqmi .gt_asterisk {
+  font-size: 100%;
+  vertical-align: 0;
+}
+
+#iduvvmsqmi .gt_indent_1 {
+  text-indent: 5px;
+}
+
+#iduvvmsqmi .gt_indent_2 {
+  text-indent: 10px;
+}
+
+#iduvvmsqmi .gt_indent_3 {
+  text-indent: 15px;
+}
+
+#iduvvmsqmi .gt_indent_4 {
+  text-indent: 20px;
+}
+
+#iduvvmsqmi .gt_indent_5 {
+  text-indent: 25px;
+}
+
+#iduvvmsqmi .katex-display {
+  display: inline-flex !important;
+  margin-bottom: 0.75em !important;
+}
+
+#iduvvmsqmi div.Reactable > div.rt-table > div.rt-thead > div.rt-tr.rt-tr-group-header > div.rt-th-group:after {
+  height: 0px !important;
+}
+</style>
+
+<table class="gt_table caption-top table table-sm table-striped small" data-quarto-bootstrap="false">
+<thead>
+<tr class="gt_heading header">
+<td colspan="6" class="gt_heading gt_title gt_font_normal gt_bottom_border">Table 1. Descriptive Statistics for Numeric Variables</td>
+</tr>
+<tr class="gt_col_headings even">
+<th id="Variable" class="gt_col_heading gt_columns_bottom_border gt_left" data-quarto-table-cell-role="th" scope="col">Variable</th>
+<th id="N" class="gt_col_heading gt_columns_bottom_border gt_right" data-quarto-table-cell-role="th" scope="col">N</th>
+<th id="Mean" class="gt_col_heading gt_columns_bottom_border gt_right" data-quarto-table-cell-role="th" scope="col">Mean</th>
+<th id="SD" class="gt_col_heading gt_columns_bottom_border gt_right" data-quarto-table-cell-role="th" scope="col">SD</th>
+<th id="Min" class="gt_col_heading gt_columns_bottom_border gt_right" data-quarto-table-cell-role="th" scope="col">Min</th>
+<th id="Max" class="gt_col_heading gt_columns_bottom_border gt_right" data-quarto-table-cell-role="th" scope="col">Max</th>
+</tr>
+</thead>
+<tbody class="gt_table_body">
+<tr class="odd">
+<td class="gt_row gt_left" headers="Variable">Probability assigned to `Likely'</td>
+<td class="gt_row gt_right" headers="N">4480</td>
+<td class="gt_row gt_right" headers="Mean">72.71</td>
+<td class="gt_row gt_right" headers="SD">10.09</td>
+<td class="gt_row gt_right" headers="Min">0</td>
+<td class="gt_row gt_right" headers="Max">100</td>
+</tr>
+<tr class="even">
+<td class="gt_row gt_left" headers="Variable">Presentation order</td>
+<td class="gt_row gt_right" headers="N">4480</td>
+<td class="gt_row gt_right" headers="Mean">10.02</td>
+<td class="gt_row gt_right" headers="SD">5.43</td>
+<td class="gt_row gt_right" headers="Min">1</td>
+<td class="gt_row gt_right" headers="Max">19</td>
+</tr>
+</tbody>
+</table>
+
+</div>
+</div>
+</div>
+<div class="cell">
+<div class="cell-output-display">
+<div id="mulpbhhevj" style="padding-left:0px;padding-right:0px;padding-top:10px;padding-bottom:10px;overflow-x:auto;overflow-y:auto;width:auto;height:auto;">
+<style>#mulpbhhevj table {
+  font-family: system-ui, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol', 'Noto Color Emoji';
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+#mulpbhhevj thead, #mulpbhhevj tbody, #mulpbhhevj tfoot, #mulpbhhevj tr, #mulpbhhevj td, #mulpbhhevj th {
+  border-style: none;
+}
+
+#mulpbhhevj p {
+  margin: 0;
+  padding: 0;
+}
+
+#mulpbhhevj .gt_table {
+  display: table;
+  border-collapse: collapse;
+  line-height: normal;
+  margin-left: auto;
+  margin-right: auto;
+  color: #333333;
+  font-size: 16px;
+  font-weight: normal;
+  font-style: normal;
+  background-color: #FFFFFF;
+  width: auto;
+  border-top-style: solid;
+  border-top-width: 2px;
+  border-top-color: #A8A8A8;
+  border-right-style: none;
+  border-right-width: 2px;
+  border-right-color: #D3D3D3;
+  border-bottom-style: solid;
+  border-bottom-width: 2px;
+  border-bottom-color: #A8A8A8;
+  border-left-style: none;
+  border-left-width: 2px;
+  border-left-color: #D3D3D3;
+}
+
+#mulpbhhevj .gt_caption {
+  padding-top: 4px;
+  padding-bottom: 4px;
+}
+
+#mulpbhhevj .gt_title {
+  color: #333333;
+  font-size: 125%;
+  font-weight: initial;
+  padding-top: 4px;
+  padding-bottom: 4px;
+  padding-left: 5px;
+  padding-right: 5px;
+  border-bottom-color: #FFFFFF;
+  border-bottom-width: 0;
+}
+
+#mulpbhhevj .gt_subtitle {
+  color: #333333;
+  font-size: 85%;
+  font-weight: initial;
+  padding-top: 3px;
+  padding-bottom: 5px;
+  padding-left: 5px;
+  padding-right: 5px;
+  border-top-color: #FFFFFF;
+  border-top-width: 0;
+}
+
+#mulpbhhevj .gt_heading {
+  background-color: #FFFFFF;
+  text-align: center;
+  border-bottom-color: #FFFFFF;
+  border-left-style: none;
+  border-left-width: 1px;
+  border-left-color: #D3D3D3;
+  border-right-style: none;
+  border-right-width: 1px;
+  border-right-color: #D3D3D3;
+}
+
+#mulpbhhevj .gt_bottom_border {
+  border-bottom-style: solid;
+  border-bottom-width: 2px;
+  border-bottom-color: #D3D3D3;
+}
+
+#mulpbhhevj .gt_col_headings {
+  border-top-style: solid;
+  border-top-width: 2px;
+  border-top-color: #D3D3D3;
+  border-bottom-style: solid;
+  border-bottom-width: 2px;
+  border-bottom-color: #D3D3D3;
+  border-left-style: none;
+  border-left-width: 1px;
+  border-left-color: #D3D3D3;
+  border-right-style: none;
+  border-right-width: 1px;
+  border-right-color: #D3D3D3;
+}
+
+#mulpbhhevj .gt_col_heading {
+  color: #333333;
+  background-color: #FFFFFF;
+  font-size: 100%;
+  font-weight: normal;
+  text-transform: inherit;
+  border-left-style: none;
+  border-left-width: 1px;
+  border-left-color: #D3D3D3;
+  border-right-style: none;
+  border-right-width: 1px;
+  border-right-color: #D3D3D3;
+  vertical-align: bottom;
+  padding-top: 5px;
+  padding-bottom: 6px;
+  padding-left: 5px;
+  padding-right: 5px;
+  overflow-x: hidden;
+}
+
+#mulpbhhevj .gt_column_spanner_outer {
+  color: #333333;
+  background-color: #FFFFFF;
+  font-size: 100%;
+  font-weight: normal;
+  text-transform: inherit;
+  padding-top: 0;
+  padding-bottom: 0;
+  padding-left: 4px;
+  padding-right: 4px;
+}
+
+#mulpbhhevj .gt_column_spanner_outer:first-child {
+  padding-left: 0;
+}
+
+#mulpbhhevj .gt_column_spanner_outer:last-child {
+  padding-right: 0;
+}
+
+#mulpbhhevj .gt_column_spanner {
+  border-bottom-style: solid;
+  border-bottom-width: 2px;
+  border-bottom-color: #D3D3D3;
+  vertical-align: bottom;
+  padding-top: 5px;
+  padding-bottom: 5px;
+  overflow-x: hidden;
+  display: inline-block;
+  width: 100%;
+}
+
+#mulpbhhevj .gt_spanner_row {
+  border-bottom-style: hidden;
+}
+
+#mulpbhhevj .gt_group_heading {
+  padding-top: 8px;
+  padding-bottom: 8px;
+  padding-left: 5px;
+  padding-right: 5px;
+  color: #333333;
+  background-color: #FFFFFF;
+  font-size: 100%;
+  font-weight: initial;
+  text-transform: inherit;
+  border-top-style: solid;
+  border-top-width: 2px;
+  border-top-color: #D3D3D3;
+  border-bottom-style: solid;
+  border-bottom-width: 2px;
+  border-bottom-color: #D3D3D3;
+  border-left-style: none;
+  border-left-width: 1px;
+  border-left-color: #D3D3D3;
+  border-right-style: none;
+  border-right-width: 1px;
+  border-right-color: #D3D3D3;
+  vertical-align: middle;
+  text-align: left;
+}
+
+#mulpbhhevj .gt_empty_group_heading {
+  padding: 0.5px;
+  color: #333333;
+  background-color: #FFFFFF;
+  font-size: 100%;
+  font-weight: initial;
+  border-top-style: solid;
+  border-top-width: 2px;
+  border-top-color: #D3D3D3;
+  border-bottom-style: solid;
+  border-bottom-width: 2px;
+  border-bottom-color: #D3D3D3;
+  vertical-align: middle;
+}
+
+#mulpbhhevj .gt_from_md > :first-child {
+  margin-top: 0;
+}
+
+#mulpbhhevj .gt_from_md > :last-child {
+  margin-bottom: 0;
+}
+
+#mulpbhhevj .gt_row {
+  padding-top: 8px;
+  padding-bottom: 8px;
+  padding-left: 5px;
+  padding-right: 5px;
+  margin: 10px;
+  border-top-style: solid;
+  border-top-width: 1px;
+  border-top-color: #D3D3D3;
+  border-left-style: none;
+  border-left-width: 1px;
+  border-left-color: #D3D3D3;
+  border-right-style: none;
+  border-right-width: 1px;
+  border-right-color: #D3D3D3;
+  vertical-align: middle;
+  overflow-x: hidden;
+}
+
+#mulpbhhevj .gt_stub {
+  color: #333333;
+  background-color: #FFFFFF;
+  font-size: 100%;
+  font-weight: initial;
+  text-transform: inherit;
+  border-right-style: solid;
+  border-right-width: 2px;
+  border-right-color: #D3D3D3;
+  padding-left: 5px;
+  padding-right: 5px;
+}
+
+#mulpbhhevj .gt_stub_row_group {
+  color: #333333;
+  background-color: #FFFFFF;
+  font-size: 100%;
+  font-weight: initial;
+  text-transform: inherit;
+  border-right-style: solid;
+  border-right-width: 2px;
+  border-right-color: #D3D3D3;
+  padding-left: 5px;
+  padding-right: 5px;
+  vertical-align: top;
+}
+
+#mulpbhhevj .gt_row_group_first td {
+  border-top-width: 2px;
+}
+
+#mulpbhhevj .gt_row_group_first th {
+  border-top-width: 2px;
+}
+
+#mulpbhhevj .gt_summary_row {
+  color: #333333;
+  background-color: #FFFFFF;
+  text-transform: inherit;
+  padding-top: 8px;
+  padding-bottom: 8px;
+  padding-left: 5px;
+  padding-right: 5px;
+}
+
+#mulpbhhevj .gt_first_summary_row {
+  border-top-style: solid;
+  border-top-color: #D3D3D3;
+}
+
+#mulpbhhevj .gt_first_summary_row.thick {
+  border-top-width: 2px;
+}
+
+#mulpbhhevj .gt_last_summary_row {
+  padding-top: 8px;
+  padding-bottom: 8px;
+  padding-left: 5px;
+  padding-right: 5px;
+  border-bottom-style: solid;
+  border-bottom-width: 2px;
+  border-bottom-color: #D3D3D3;
+}
+
+#mulpbhhevj .gt_grand_summary_row {
+  color: #333333;
+  background-color: #FFFFFF;
+  text-transform: inherit;
+  padding-top: 8px;
+  padding-bottom: 8px;
+  padding-left: 5px;
+  padding-right: 5px;
+}
+
+#mulpbhhevj .gt_first_grand_summary_row {
+  padding-top: 8px;
+  padding-bottom: 8px;
+  padding-left: 5px;
+  padding-right: 5px;
+  border-top-style: double;
+  border-top-width: 6px;
+  border-top-color: #D3D3D3;
+}
+
+#mulpbhhevj .gt_last_grand_summary_row_top {
+  padding-top: 8px;
+  padding-bottom: 8px;
+  padding-left: 5px;
+  padding-right: 5px;
+  border-bottom-style: double;
+  border-bottom-width: 6px;
+  border-bottom-color: #D3D3D3;
+}
+
+#mulpbhhevj .gt_striped {
+  background-color: rgba(128, 128, 128, 0.05);
+}
+
+#mulpbhhevj .gt_table_body {
+  border-top-style: solid;
+  border-top-width: 2px;
+  border-top-color: #D3D3D3;
+  border-bottom-style: solid;
+  border-bottom-width: 2px;
+  border-bottom-color: #D3D3D3;
+}
+
+#mulpbhhevj .gt_footnotes {
+  color: #333333;
+  background-color: #FFFFFF;
+  border-bottom-style: none;
+  border-bottom-width: 2px;
+  border-bottom-color: #D3D3D3;
+  border-left-style: none;
+  border-left-width: 2px;
+  border-left-color: #D3D3D3;
+  border-right-style: none;
+  border-right-width: 2px;
+  border-right-color: #D3D3D3;
+}
+
+#mulpbhhevj .gt_footnote {
+  margin: 0px;
+  font-size: 90%;
+  padding-top: 4px;
+  padding-bottom: 4px;
+  padding-left: 5px;
+  padding-right: 5px;
+}
+
+#mulpbhhevj .gt_sourcenotes {
+  color: #333333;
+  background-color: #FFFFFF;
+  border-bottom-style: none;
+  border-bottom-width: 2px;
+  border-bottom-color: #D3D3D3;
+  border-left-style: none;
+  border-left-width: 2px;
+  border-left-color: #D3D3D3;
+  border-right-style: none;
+  border-right-width: 2px;
+  border-right-color: #D3D3D3;
+}
+
+#mulpbhhevj .gt_sourcenote {
+  font-size: 90%;
+  padding-top: 4px;
+  padding-bottom: 4px;
+  padding-left: 5px;
+  padding-right: 5px;
+}
+
+#mulpbhhevj .gt_left {
+  text-align: left;
+}
+
+#mulpbhhevj .gt_center {
+  text-align: center;
+}
+
+#mulpbhhevj .gt_right {
+  text-align: right;
+  font-variant-numeric: tabular-nums;
+}
+
+#mulpbhhevj .gt_font_normal {
+  font-weight: normal;
+}
+
+#mulpbhhevj .gt_font_bold {
+  font-weight: bold;
+}
+
+#mulpbhhevj .gt_font_italic {
+  font-style: italic;
+}
+
+#mulpbhhevj .gt_super {
+  font-size: 65%;
+}
+
+#mulpbhhevj .gt_footnote_marks {
+  font-size: 75%;
+  vertical-align: 0.4em;
+  position: initial;
+}
+
+#mulpbhhevj .gt_asterisk {
+  font-size: 100%;
+  vertical-align: 0;
+}
+
+#mulpbhhevj .gt_indent_1 {
+  text-indent: 5px;
+}
+
+#mulpbhhevj .gt_indent_2 {
+  text-indent: 10px;
+}
+
+#mulpbhhevj .gt_indent_3 {
+  text-indent: 15px;
+}
+
+#mulpbhhevj .gt_indent_4 {
+  text-indent: 20px;
+}
+
+#mulpbhhevj .gt_indent_5 {
+  text-indent: 25px;
+}
+
+#mulpbhhevj .katex-display {
+  display: inline-flex !important;
+  margin-bottom: 0.75em !important;
+}
+
+#mulpbhhevj div.Reactable > div.rt-table > div.rt-thead > div.rt-tr.rt-tr-group-header > div.rt-th-group:after {
+  height: 0px !important;
+}
+</style>
+
+<table class="gt_table caption-top table table-sm table-striped small" data-quarto-bootstrap="false">
+<thead>
+<tr class="gt_heading header">
+<td colspan="4" class="gt_heading gt_title gt_font_normal gt_bottom_border">Table 2. Sample Characteristics</td>
+</tr>
+<tr class="gt_col_headings even">
+<th id="Variable" class="gt_col_heading gt_columns_bottom_border gt_left" data-quarto-table-cell-role="th" scope="col">Variable</th>
+<th id="Group" class="gt_col_heading gt_columns_bottom_border gt_center" data-quarto-table-cell-role="th" scope="col">Group</th>
+<th id="n" class="gt_col_heading gt_columns_bottom_border gt_right" data-quarto-table-cell-role="th" scope="col">n</th>
+<th id="Percent" class="gt_col_heading gt_columns_bottom_border gt_right" data-quarto-table-cell-role="th" scope="col">Percent</th>
+</tr>
+</thead>
+<tbody class="gt_table_body">
+<tr class="odd">
+<td class="gt_row gt_left" headers="Variable">Education</td>
+<td class="gt_row gt_center" headers="Group">No degree</td>
+<td class="gt_row gt_right" headers="n">371</td>
+<td class="gt_row gt_right" headers="Percent">8.3</td>
+</tr>
+<tr class="even">
+<td class="gt_row gt_left" headers="Variable">Education</td>
+<td class="gt_row gt_center" headers="Group">Bachelor</td>
+<td class="gt_row gt_right" headers="n">1427</td>
+<td class="gt_row gt_right" headers="Percent">31.9</td>
+</tr>
+<tr class="odd">
+<td class="gt_row gt_left" headers="Variable">Education</td>
+<td class="gt_row gt_center" headers="Group">Postgraduate</td>
+<td class="gt_row gt_right" headers="n">2682</td>
+<td class="gt_row gt_right" headers="Percent">59.9</td>
+</tr>
+<tr class="even">
+<td class="gt_row gt_left" headers="Variable">English</td>
+<td class="gt_row gt_center" headers="Group">First language</td>
+<td class="gt_row gt_right" headers="n">3801</td>
+<td class="gt_row gt_right" headers="Percent">84.8</td>
+</tr>
+<tr class="odd">
+<td class="gt_row gt_left" headers="Variable">English</td>
+<td class="gt_row gt_center" headers="Group">Not first language</td>
+<td class="gt_row gt_right" headers="n">679</td>
+<td class="gt_row gt_right" headers="Percent">15.2</td>
+</tr>
+<tr class="even">
+<td class="gt_row gt_left" headers="Variable">Age</td>
+<td class="gt_row gt_center" headers="Group">Under 25</td>
+<td class="gt_row gt_right" headers="n">149</td>
+<td class="gt_row gt_right" headers="Percent">3.3</td>
+</tr>
+<tr class="odd">
+<td class="gt_row gt_left" headers="Variable">Age</td>
+<td class="gt_row gt_center" headers="Group">25-34</td>
+<td class="gt_row gt_right" headers="n">825</td>
+<td class="gt_row gt_right" headers="Percent">18.4</td>
+</tr>
+<tr class="even">
+<td class="gt_row gt_left" headers="Variable">Age</td>
+<td class="gt_row gt_center" headers="Group">35-44</td>
+<td class="gt_row gt_right" headers="n">1341</td>
+<td class="gt_row gt_right" headers="Percent">29.9</td>
+</tr>
+<tr class="odd">
+<td class="gt_row gt_left" headers="Variable">Age</td>
+<td class="gt_row gt_center" headers="Group">45-54</td>
+<td class="gt_row gt_right" headers="n">1101</td>
+<td class="gt_row gt_right" headers="Percent">24.6</td>
+</tr>
+<tr class="even">
+<td class="gt_row gt_left" headers="Variable">Age</td>
+<td class="gt_row gt_center" headers="Group">55-64</td>
+<td class="gt_row gt_right" headers="n">682</td>
+<td class="gt_row gt_right" headers="Percent">15.2</td>
+</tr>
+<tr class="odd">
+<td class="gt_row gt_left" headers="Variable">Age</td>
+<td class="gt_row gt_center" headers="Group">65+</td>
+<td class="gt_row gt_right" headers="n">382</td>
+<td class="gt_row gt_right" headers="Percent">8.5</td>
+</tr>
+</tbody>
+</table>
+
+</div>
+</div>
+</div>
+<div class="cell">
+<div class="cell-output-display">
+<div id="fig-likely" class="quarto-float quarto-figure quarto-figure-center anchored">
+<figure class="quarto-float quarto-float-fig figure">
+<div aria-describedby="fig-likely-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<img src="index_files/figure-html/fig-likely-1.png" class="img-fluid figure-img" width="672">
+</div>
+<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-likely-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Figure&nbsp;1: Figure 1. Distrubtion of the probability particapnts assigned to ‘Likely’.
+</figcaption>
+</figure>
+</div>
+</div>
+</div>
+<div class="cell">
+<details class="code-fold">
+<summary>Code</summary>
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb6"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb6-1"><a href="#cb6-1" aria-hidden="true" tabindex="-1"></a><span class="co"># null mode: everyone gets the same predicted rating (the mean)</span></span>
+<span id="cb6-2"><a href="#cb6-2" aria-hidden="true" tabindex="-1"></a>m0 <span class="ot">&lt;-</span> <span class="fu">glmmTMB</span>(probability <span class="sc">~</span><span class="dv">1</span>,</span>
+<span id="cb6-3"><a href="#cb6-3" aria-hidden="true" tabindex="-1"></a>              <span class="at">data =</span> likely_complete,</span>
+<span id="cb6-4"><a href="#cb6-4" aria-hidden="true" tabindex="-1"></a>              <span class="at">family =</span> <span class="fu">gaussian</span>(<span class="at">link =</span> <span class="st">"identity"</span>))</span>
+<span id="cb6-5"><a href="#cb6-5" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb6-6"><a href="#cb6-6" aria-hidden="true" tabindex="-1"></a><span class="co"># model 1: add presentation order </span></span>
+<span id="cb6-7"><a href="#cb6-7" aria-hidden="true" tabindex="-1"></a>m1 <span class="ot">&lt;-</span><span class="fu">glmmTMB</span>(probability <span class="sc">~</span> order,</span>
+<span id="cb6-8"><a href="#cb6-8" aria-hidden="true" tabindex="-1"></a>             <span class="at">data =</span> likely_complete,</span>
+<span id="cb6-9"><a href="#cb6-9" aria-hidden="true" tabindex="-1"></a>             <span class="at">family =</span> <span class="fu">gaussian</span>(<span class="at">link =</span> <span class="st">"identity"</span>))</span>
+<span id="cb6-10"><a href="#cb6-10" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb6-11"><a href="#cb6-11" aria-hidden="true" tabindex="-1"></a><span class="co"># model 2: add the background variables</span></span>
+<span id="cb6-12"><a href="#cb6-12" aria-hidden="true" tabindex="-1"></a>m2 <span class="ot">&lt;-</span> <span class="fu">glmmTMB</span>(probability <span class="sc">~</span> order <span class="sc">+</span> education <span class="sc">+</span> english <span class="sc">+</span> age,</span>
+<span id="cb6-13"><a href="#cb6-13" aria-hidden="true" tabindex="-1"></a>             <span class="at">data =</span> likely_complete,</span>
+<span id="cb6-14"><a href="#cb6-14" aria-hidden="true" tabindex="-1"></a>             <span class="at">family =</span> <span class="fu">gaussian</span>(<span class="at">link =</span> <span class="st">"identity"</span>))</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+</details>
+</div>
+<div class="cell">
+<details class="code-fold">
+<summary>Code</summary>
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb7"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb7-1"><a href="#cb7-1" aria-hidden="true" tabindex="-1"></a><span class="co"># likelihood-ratio tests: does each step up on the models improve the model?</span></span>
+<span id="cb7-2"><a href="#cb7-2" aria-hidden="true" tabindex="-1"></a>model_tests <span class="ot">&lt;-</span> <span class="fu">anova</span>(m0, m1, m2)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+</details>
+</div>
+</section>
+<section id="model-comparison" class="level3">
+<h3 class="anchored" data-anchor-id="model-comparison">Model Comparison</h3>
+<div class="cell">
+<div class="cell-output-display">
+<div id="eivoohbyof" style="padding-left:0px;padding-right:0px;padding-top:10px;padding-bottom:10px;overflow-x:auto;overflow-y:auto;width:auto;height:auto;">
+<style>#eivoohbyof table {
+  font-family: system-ui, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol', 'Noto Color Emoji';
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+#eivoohbyof thead, #eivoohbyof tbody, #eivoohbyof tfoot, #eivoohbyof tr, #eivoohbyof td, #eivoohbyof th {
+  border-style: none;
+}
+
+#eivoohbyof p {
+  margin: 0;
+  padding: 0;
+}
+
+#eivoohbyof .gt_table {
+  display: table;
+  border-collapse: collapse;
+  line-height: normal;
+  margin-left: auto;
+  margin-right: auto;
+  color: #333333;
+  font-size: 16px;
+  font-weight: normal;
+  font-style: normal;
+  background-color: #FFFFFF;
+  width: auto;
+  border-top-style: solid;
+  border-top-width: 2px;
+  border-top-color: #A8A8A8;
+  border-right-style: none;
+  border-right-width: 2px;
+  border-right-color: #D3D3D3;
+  border-bottom-style: solid;
+  border-bottom-width: 2px;
+  border-bottom-color: #A8A8A8;
+  border-left-style: none;
+  border-left-width: 2px;
+  border-left-color: #D3D3D3;
+}
+
+#eivoohbyof .gt_caption {
+  padding-top: 4px;
+  padding-bottom: 4px;
+}
+
+#eivoohbyof .gt_title {
+  color: #333333;
+  font-size: 125%;
+  font-weight: initial;
+  padding-top: 4px;
+  padding-bottom: 4px;
+  padding-left: 5px;
+  padding-right: 5px;
+  border-bottom-color: #FFFFFF;
+  border-bottom-width: 0;
+}
+
+#eivoohbyof .gt_subtitle {
+  color: #333333;
+  font-size: 85%;
+  font-weight: initial;
+  padding-top: 3px;
+  padding-bottom: 5px;
+  padding-left: 5px;
+  padding-right: 5px;
+  border-top-color: #FFFFFF;
+  border-top-width: 0;
+}
+
+#eivoohbyof .gt_heading {
+  background-color: #FFFFFF;
+  text-align: center;
+  border-bottom-color: #FFFFFF;
+  border-left-style: none;
+  border-left-width: 1px;
+  border-left-color: #D3D3D3;
+  border-right-style: none;
+  border-right-width: 1px;
+  border-right-color: #D3D3D3;
+}
+
+#eivoohbyof .gt_bottom_border {
+  border-bottom-style: solid;
+  border-bottom-width: 2px;
+  border-bottom-color: #D3D3D3;
+}
+
+#eivoohbyof .gt_col_headings {
+  border-top-style: solid;
+  border-top-width: 2px;
+  border-top-color: #D3D3D3;
+  border-bottom-style: solid;
+  border-bottom-width: 2px;
+  border-bottom-color: #D3D3D3;
+  border-left-style: none;
+  border-left-width: 1px;
+  border-left-color: #D3D3D3;
+  border-right-style: none;
+  border-right-width: 1px;
+  border-right-color: #D3D3D3;
+}
+
+#eivoohbyof .gt_col_heading {
+  color: #333333;
+  background-color: #FFFFFF;
+  font-size: 100%;
+  font-weight: normal;
+  text-transform: inherit;
+  border-left-style: none;
+  border-left-width: 1px;
+  border-left-color: #D3D3D3;
+  border-right-style: none;
+  border-right-width: 1px;
+  border-right-color: #D3D3D3;
+  vertical-align: bottom;
+  padding-top: 5px;
+  padding-bottom: 6px;
+  padding-left: 5px;
+  padding-right: 5px;
+  overflow-x: hidden;
+}
+
+#eivoohbyof .gt_column_spanner_outer {
+  color: #333333;
+  background-color: #FFFFFF;
+  font-size: 100%;
+  font-weight: normal;
+  text-transform: inherit;
+  padding-top: 0;
+  padding-bottom: 0;
+  padding-left: 4px;
+  padding-right: 4px;
+}
+
+#eivoohbyof .gt_column_spanner_outer:first-child {
+  padding-left: 0;
+}
+
+#eivoohbyof .gt_column_spanner_outer:last-child {
+  padding-right: 0;
+}
+
+#eivoohbyof .gt_column_spanner {
+  border-bottom-style: solid;
+  border-bottom-width: 2px;
+  border-bottom-color: #D3D3D3;
+  vertical-align: bottom;
+  padding-top: 5px;
+  padding-bottom: 5px;
+  overflow-x: hidden;
+  display: inline-block;
+  width: 100%;
+}
+
+#eivoohbyof .gt_spanner_row {
+  border-bottom-style: hidden;
+}
+
+#eivoohbyof .gt_group_heading {
+  padding-top: 8px;
+  padding-bottom: 8px;
+  padding-left: 5px;
+  padding-right: 5px;
+  color: #333333;
+  background-color: #FFFFFF;
+  font-size: 100%;
+  font-weight: initial;
+  text-transform: inherit;
+  border-top-style: solid;
+  border-top-width: 2px;
+  border-top-color: #D3D3D3;
+  border-bottom-style: solid;
+  border-bottom-width: 2px;
+  border-bottom-color: #D3D3D3;
+  border-left-style: none;
+  border-left-width: 1px;
+  border-left-color: #D3D3D3;
+  border-right-style: none;
+  border-right-width: 1px;
+  border-right-color: #D3D3D3;
+  vertical-align: middle;
+  text-align: left;
+}
+
+#eivoohbyof .gt_empty_group_heading {
+  padding: 0.5px;
+  color: #333333;
+  background-color: #FFFFFF;
+  font-size: 100%;
+  font-weight: initial;
+  border-top-style: solid;
+  border-top-width: 2px;
+  border-top-color: #D3D3D3;
+  border-bottom-style: solid;
+  border-bottom-width: 2px;
+  border-bottom-color: #D3D3D3;
+  vertical-align: middle;
+}
+
+#eivoohbyof .gt_from_md > :first-child {
+  margin-top: 0;
+}
+
+#eivoohbyof .gt_from_md > :last-child {
+  margin-bottom: 0;
+}
+
+#eivoohbyof .gt_row {
+  padding-top: 8px;
+  padding-bottom: 8px;
+  padding-left: 5px;
+  padding-right: 5px;
+  margin: 10px;
+  border-top-style: solid;
+  border-top-width: 1px;
+  border-top-color: #D3D3D3;
+  border-left-style: none;
+  border-left-width: 1px;
+  border-left-color: #D3D3D3;
+  border-right-style: none;
+  border-right-width: 1px;
+  border-right-color: #D3D3D3;
+  vertical-align: middle;
+  overflow-x: hidden;
+}
+
+#eivoohbyof .gt_stub {
+  color: #333333;
+  background-color: #FFFFFF;
+  font-size: 100%;
+  font-weight: initial;
+  text-transform: inherit;
+  border-right-style: solid;
+  border-right-width: 2px;
+  border-right-color: #D3D3D3;
+  padding-left: 5px;
+  padding-right: 5px;
+}
+
+#eivoohbyof .gt_stub_row_group {
+  color: #333333;
+  background-color: #FFFFFF;
+  font-size: 100%;
+  font-weight: initial;
+  text-transform: inherit;
+  border-right-style: solid;
+  border-right-width: 2px;
+  border-right-color: #D3D3D3;
+  padding-left: 5px;
+  padding-right: 5px;
+  vertical-align: top;
+}
+
+#eivoohbyof .gt_row_group_first td {
+  border-top-width: 2px;
+}
+
+#eivoohbyof .gt_row_group_first th {
+  border-top-width: 2px;
+}
+
+#eivoohbyof .gt_summary_row {
+  color: #333333;
+  background-color: #FFFFFF;
+  text-transform: inherit;
+  padding-top: 8px;
+  padding-bottom: 8px;
+  padding-left: 5px;
+  padding-right: 5px;
+}
+
+#eivoohbyof .gt_first_summary_row {
+  border-top-style: solid;
+  border-top-color: #D3D3D3;
+}
+
+#eivoohbyof .gt_first_summary_row.thick {
+  border-top-width: 2px;
+}
+
+#eivoohbyof .gt_last_summary_row {
+  padding-top: 8px;
+  padding-bottom: 8px;
+  padding-left: 5px;
+  padding-right: 5px;
+  border-bottom-style: solid;
+  border-bottom-width: 2px;
+  border-bottom-color: #D3D3D3;
+}
+
+#eivoohbyof .gt_grand_summary_row {
+  color: #333333;
+  background-color: #FFFFFF;
+  text-transform: inherit;
+  padding-top: 8px;
+  padding-bottom: 8px;
+  padding-left: 5px;
+  padding-right: 5px;
+}
+
+#eivoohbyof .gt_first_grand_summary_row {
+  padding-top: 8px;
+  padding-bottom: 8px;
+  padding-left: 5px;
+  padding-right: 5px;
+  border-top-style: double;
+  border-top-width: 6px;
+  border-top-color: #D3D3D3;
+}
+
+#eivoohbyof .gt_last_grand_summary_row_top {
+  padding-top: 8px;
+  padding-bottom: 8px;
+  padding-left: 5px;
+  padding-right: 5px;
+  border-bottom-style: double;
+  border-bottom-width: 6px;
+  border-bottom-color: #D3D3D3;
+}
+
+#eivoohbyof .gt_striped {
+  background-color: rgba(128, 128, 128, 0.05);
+}
+
+#eivoohbyof .gt_table_body {
+  border-top-style: solid;
+  border-top-width: 2px;
+  border-top-color: #D3D3D3;
+  border-bottom-style: solid;
+  border-bottom-width: 2px;
+  border-bottom-color: #D3D3D3;
+}
+
+#eivoohbyof .gt_footnotes {
+  color: #333333;
+  background-color: #FFFFFF;
+  border-bottom-style: none;
+  border-bottom-width: 2px;
+  border-bottom-color: #D3D3D3;
+  border-left-style: none;
+  border-left-width: 2px;
+  border-left-color: #D3D3D3;
+  border-right-style: none;
+  border-right-width: 2px;
+  border-right-color: #D3D3D3;
+}
+
+#eivoohbyof .gt_footnote {
+  margin: 0px;
+  font-size: 90%;
+  padding-top: 4px;
+  padding-bottom: 4px;
+  padding-left: 5px;
+  padding-right: 5px;
+}
+
+#eivoohbyof .gt_sourcenotes {
+  color: #333333;
+  background-color: #FFFFFF;
+  border-bottom-style: none;
+  border-bottom-width: 2px;
+  border-bottom-color: #D3D3D3;
+  border-left-style: none;
+  border-left-width: 2px;
+  border-left-color: #D3D3D3;
+  border-right-style: none;
+  border-right-width: 2px;
+  border-right-color: #D3D3D3;
+}
+
+#eivoohbyof .gt_sourcenote {
+  font-size: 90%;
+  padding-top: 4px;
+  padding-bottom: 4px;
+  padding-left: 5px;
+  padding-right: 5px;
+}
+
+#eivoohbyof .gt_left {
+  text-align: left;
+}
+
+#eivoohbyof .gt_center {
+  text-align: center;
+}
+
+#eivoohbyof .gt_right {
+  text-align: right;
+  font-variant-numeric: tabular-nums;
+}
+
+#eivoohbyof .gt_font_normal {
+  font-weight: normal;
+}
+
+#eivoohbyof .gt_font_bold {
+  font-weight: bold;
+}
+
+#eivoohbyof .gt_font_italic {
+  font-style: italic;
+}
+
+#eivoohbyof .gt_super {
+  font-size: 65%;
+}
+
+#eivoohbyof .gt_footnote_marks {
+  font-size: 75%;
+  vertical-align: 0.4em;
+  position: initial;
+}
+
+#eivoohbyof .gt_asterisk {
+  font-size: 100%;
+  vertical-align: 0;
+}
+
+#eivoohbyof .gt_indent_1 {
+  text-indent: 5px;
+}
+
+#eivoohbyof .gt_indent_2 {
+  text-indent: 10px;
+}
+
+#eivoohbyof .gt_indent_3 {
+  text-indent: 15px;
+}
+
+#eivoohbyof .gt_indent_4 {
+  text-indent: 20px;
+}
+
+#eivoohbyof .gt_indent_5 {
+  text-indent: 25px;
+}
+
+#eivoohbyof .katex-display {
+  display: inline-flex !important;
+  margin-bottom: 0.75em !important;
+}
+
+#eivoohbyof div.Reactable > div.rt-table > div.rt-thead > div.rt-tr.rt-tr-group-header > div.rt-th-group:after {
+  height: 0px !important;
+}
+</style>
+
+<table class="gt_table caption-top table table-sm table-striped small" data-quarto-bootstrap="false">
+<thead>
+<tr class="gt_heading header">
+<td colspan="4" class="gt_heading gt_title gt_font_normal gt_bottom_border">Table 4. Model Fit Comparison</td>
+</tr>
+<tr class="gt_col_headings even">
+<th id="Model" class="gt_col_heading gt_columns_bottom_border gt_left" data-quarto-table-cell-role="th" scope="col">Model</th>
+<th id="AIC" class="gt_col_heading gt_columns_bottom_border gt_right" data-quarto-table-cell-role="th" scope="col">AIC</th>
+<th id="BIC" class="gt_col_heading gt_columns_bottom_border gt_right" data-quarto-table-cell-role="th" scope="col">BIC</th>
+<th id="logLik" class="gt_col_heading gt_columns_bottom_border gt_right" data-quarto-table-cell-role="th" scope="col">logLik</th>
+</tr>
+</thead>
+<tbody class="gt_table_body">
+<tr class="odd">
+<td class="gt_row gt_left" headers="Model">M0: Null</td>
+<td class="gt_row gt_right" headers="AIC">33,424.3</td>
+<td class="gt_row gt_right" headers="BIC">33,437.1</td>
+<td class="gt_row gt_right" headers="logLik">−16,710.1</td>
+</tr>
+<tr class="even">
+<td class="gt_row gt_left" headers="Model">M1: Order</td>
+<td class="gt_row gt_right" headers="AIC">33,425.6</td>
+<td class="gt_row gt_right" headers="BIC">33,444.8</td>
+<td class="gt_row gt_right" headers="logLik">−16,709.8</td>
+</tr>
+<tr class="odd">
+<td class="gt_row gt_left" headers="Model">M2: Order + Background</td>
+<td class="gt_row gt_right" headers="AIC">33,428.3</td>
+<td class="gt_row gt_right" headers="BIC">33,498.8</td>
+<td class="gt_row gt_right" headers="logLik">−16,703.1</td>
+</tr>
+</tbody><tfoot>
+<tr class="gt_sourcenotes odd">
+<td colspan="4" class="gt_sourcenote">Lower AIC and BIC indicate better fit.</td>
+</tr>
+</tfoot>
+
+</table>
+
+</div>
+</div>
+</div>
+<p>Nested models were compared using a likelihood-ratio test. The null model (M0), which contained only the average probability rating, served as a reference model. Placement of the term “Likely” was added to the model (M1); however, the likelihood-ratio test, χ²(1) = 0.71, <em>p</em> = 0.401, showed that it did not significantly improve the model fit. Adding the background variables (M2) also did not significantly improve fit beyond order alone, χ²(8) = 13.3, <em>p</em> = 0.102. Consistent with these results, both the AIC and BIC were lowest for the null model(AIC = 3.34243^{4}) and highest for M2 (AIC = 3.34283^{4}; see Table 4). This indicates that the improvement in fit from adding the background variables did not offset the penalty of complexity. Thus, the null model was preferred.</p>
+</section>
+<section id="model-diagnostics" class="level3">
+<h3 class="anchored" data-anchor-id="model-diagnostics">Model Diagnostics</h3>
+<div class="cell">
+<div class="cell-output-display">
+<div id="fig-diagnostics" class="quarto-float quarto-figure quarto-figure-center anchored">
+<figure class="quarto-float quarto-float-fig figure">
+<div aria-describedby="fig-diagnostics-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<img src="index_files/figure-html/fig-diagnostics-1.png" class="img-fluid figure-img" width="672">
+</div>
+<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-diagnostics-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Figure&nbsp;2: Figure 3. DHARMa simulated residual diagnostics for Model 2
+</figcaption>
+</figure>
+</div>
+</div>
+</div>
+<p>Model assumptions were assessed for M2 using simulated residuals from the DHARMa package (Figure 3), which compared the observed data with 500 datasets simulated from the fitted model. The dispersion test indicated that the spread of the observed data matched what the model expected (p = 0.98). However, the uniformity (KS) test indicated that the observed residuals did not fully match the simulated distribution (<em>p</em> &lt; .001), likely because most participants answered in multiples of 5 or 10 (see Figure 1). Comparing the outlier real answer to the simulated DHARMa responses, the outlier test was also significant (<em>p</em> &lt; .001), indicating more outliers than would be expected by chance; these responses were kept because they represent genuine answers rather than errors. The residual-versus-predicted plot showed approximately flat quantile lines, meaning the model did not over- or under- predict ratings across the predicted values. Because the large sample size makes the tests sensitive to even small differences in responses, these deviations were considered minor. Finally, all variance inflation factors were close to 1 (maximum VIF = 1.11) indicating that the predictors were not strongly related ot one another.</p>
+</section>
+<section id="parameter-estimates" class="level3">
+<h3 class="anchored" data-anchor-id="parameter-estimates">Parameter Estimates</h3>
+<div class="cell">
+<div class="cell-output-display">
+<div id="euojxrqkqg" style="padding-left:0px;padding-right:0px;padding-top:10px;padding-bottom:10px;overflow-x:auto;overflow-y:auto;width:auto;height:auto;">
+<style>#euojxrqkqg table {
+  font-family: system-ui, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol', 'Noto Color Emoji';
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+#euojxrqkqg thead, #euojxrqkqg tbody, #euojxrqkqg tfoot, #euojxrqkqg tr, #euojxrqkqg td, #euojxrqkqg th {
+  border-style: none;
+}
+
+#euojxrqkqg p {
+  margin: 0;
+  padding: 0;
+}
+
+#euojxrqkqg .gt_table {
+  display: table;
+  border-collapse: collapse;
+  line-height: normal;
+  margin-left: auto;
+  margin-right: auto;
+  color: #333333;
+  font-size: 16px;
+  font-weight: normal;
+  font-style: normal;
+  background-color: #FFFFFF;
+  width: auto;
+  border-top-style: solid;
+  border-top-width: 2px;
+  border-top-color: #A8A8A8;
+  border-right-style: none;
+  border-right-width: 2px;
+  border-right-color: #D3D3D3;
+  border-bottom-style: solid;
+  border-bottom-width: 2px;
+  border-bottom-color: #A8A8A8;
+  border-left-style: none;
+  border-left-width: 2px;
+  border-left-color: #D3D3D3;
+}
+
+#euojxrqkqg .gt_caption {
+  padding-top: 4px;
+  padding-bottom: 4px;
+}
+
+#euojxrqkqg .gt_title {
+  color: #333333;
+  font-size: 125%;
+  font-weight: initial;
+  padding-top: 4px;
+  padding-bottom: 4px;
+  padding-left: 5px;
+  padding-right: 5px;
+  border-bottom-color: #FFFFFF;
+  border-bottom-width: 0;
+}
+
+#euojxrqkqg .gt_subtitle {
+  color: #333333;
+  font-size: 85%;
+  font-weight: initial;
+  padding-top: 3px;
+  padding-bottom: 5px;
+  padding-left: 5px;
+  padding-right: 5px;
+  border-top-color: #FFFFFF;
+  border-top-width: 0;
+}
+
+#euojxrqkqg .gt_heading {
+  background-color: #FFFFFF;
+  text-align: center;
+  border-bottom-color: #FFFFFF;
+  border-left-style: none;
+  border-left-width: 1px;
+  border-left-color: #D3D3D3;
+  border-right-style: none;
+  border-right-width: 1px;
+  border-right-color: #D3D3D3;
+}
+
+#euojxrqkqg .gt_bottom_border {
+  border-bottom-style: solid;
+  border-bottom-width: 2px;
+  border-bottom-color: #D3D3D3;
+}
+
+#euojxrqkqg .gt_col_headings {
+  border-top-style: solid;
+  border-top-width: 2px;
+  border-top-color: #D3D3D3;
+  border-bottom-style: solid;
+  border-bottom-width: 2px;
+  border-bottom-color: #D3D3D3;
+  border-left-style: none;
+  border-left-width: 1px;
+  border-left-color: #D3D3D3;
+  border-right-style: none;
+  border-right-width: 1px;
+  border-right-color: #D3D3D3;
+}
+
+#euojxrqkqg .gt_col_heading {
+  color: #333333;
+  background-color: #FFFFFF;
+  font-size: 100%;
+  font-weight: normal;
+  text-transform: inherit;
+  border-left-style: none;
+  border-left-width: 1px;
+  border-left-color: #D3D3D3;
+  border-right-style: none;
+  border-right-width: 1px;
+  border-right-color: #D3D3D3;
+  vertical-align: bottom;
+  padding-top: 5px;
+  padding-bottom: 6px;
+  padding-left: 5px;
+  padding-right: 5px;
+  overflow-x: hidden;
+}
+
+#euojxrqkqg .gt_column_spanner_outer {
+  color: #333333;
+  background-color: #FFFFFF;
+  font-size: 100%;
+  font-weight: normal;
+  text-transform: inherit;
+  padding-top: 0;
+  padding-bottom: 0;
+  padding-left: 4px;
+  padding-right: 4px;
+}
+
+#euojxrqkqg .gt_column_spanner_outer:first-child {
+  padding-left: 0;
+}
+
+#euojxrqkqg .gt_column_spanner_outer:last-child {
+  padding-right: 0;
+}
+
+#euojxrqkqg .gt_column_spanner {
+  border-bottom-style: solid;
+  border-bottom-width: 2px;
+  border-bottom-color: #D3D3D3;
+  vertical-align: bottom;
+  padding-top: 5px;
+  padding-bottom: 5px;
+  overflow-x: hidden;
+  display: inline-block;
+  width: 100%;
+}
+
+#euojxrqkqg .gt_spanner_row {
+  border-bottom-style: hidden;
+}
+
+#euojxrqkqg .gt_group_heading {
+  padding-top: 8px;
+  padding-bottom: 8px;
+  padding-left: 5px;
+  padding-right: 5px;
+  color: #333333;
+  background-color: #FFFFFF;
+  font-size: 100%;
+  font-weight: initial;
+  text-transform: inherit;
+  border-top-style: solid;
+  border-top-width: 2px;
+  border-top-color: #D3D3D3;
+  border-bottom-style: solid;
+  border-bottom-width: 2px;
+  border-bottom-color: #D3D3D3;
+  border-left-style: none;
+  border-left-width: 1px;
+  border-left-color: #D3D3D3;
+  border-right-style: none;
+  border-right-width: 1px;
+  border-right-color: #D3D3D3;
+  vertical-align: middle;
+  text-align: left;
+}
+
+#euojxrqkqg .gt_empty_group_heading {
+  padding: 0.5px;
+  color: #333333;
+  background-color: #FFFFFF;
+  font-size: 100%;
+  font-weight: initial;
+  border-top-style: solid;
+  border-top-width: 2px;
+  border-top-color: #D3D3D3;
+  border-bottom-style: solid;
+  border-bottom-width: 2px;
+  border-bottom-color: #D3D3D3;
+  vertical-align: middle;
+}
+
+#euojxrqkqg .gt_from_md > :first-child {
+  margin-top: 0;
+}
+
+#euojxrqkqg .gt_from_md > :last-child {
+  margin-bottom: 0;
+}
+
+#euojxrqkqg .gt_row {
+  padding-top: 8px;
+  padding-bottom: 8px;
+  padding-left: 5px;
+  padding-right: 5px;
+  margin: 10px;
+  border-top-style: solid;
+  border-top-width: 1px;
+  border-top-color: #D3D3D3;
+  border-left-style: none;
+  border-left-width: 1px;
+  border-left-color: #D3D3D3;
+  border-right-style: none;
+  border-right-width: 1px;
+  border-right-color: #D3D3D3;
+  vertical-align: middle;
+  overflow-x: hidden;
+}
+
+#euojxrqkqg .gt_stub {
+  color: #333333;
+  background-color: #FFFFFF;
+  font-size: 100%;
+  font-weight: initial;
+  text-transform: inherit;
+  border-right-style: solid;
+  border-right-width: 2px;
+  border-right-color: #D3D3D3;
+  padding-left: 5px;
+  padding-right: 5px;
+}
+
+#euojxrqkqg .gt_stub_row_group {
+  color: #333333;
+  background-color: #FFFFFF;
+  font-size: 100%;
+  font-weight: initial;
+  text-transform: inherit;
+  border-right-style: solid;
+  border-right-width: 2px;
+  border-right-color: #D3D3D3;
+  padding-left: 5px;
+  padding-right: 5px;
+  vertical-align: top;
+}
+
+#euojxrqkqg .gt_row_group_first td {
+  border-top-width: 2px;
+}
+
+#euojxrqkqg .gt_row_group_first th {
+  border-top-width: 2px;
+}
+
+#euojxrqkqg .gt_summary_row {
+  color: #333333;
+  background-color: #FFFFFF;
+  text-transform: inherit;
+  padding-top: 8px;
+  padding-bottom: 8px;
+  padding-left: 5px;
+  padding-right: 5px;
+}
+
+#euojxrqkqg .gt_first_summary_row {
+  border-top-style: solid;
+  border-top-color: #D3D3D3;
+}
+
+#euojxrqkqg .gt_first_summary_row.thick {
+  border-top-width: 2px;
+}
+
+#euojxrqkqg .gt_last_summary_row {
+  padding-top: 8px;
+  padding-bottom: 8px;
+  padding-left: 5px;
+  padding-right: 5px;
+  border-bottom-style: solid;
+  border-bottom-width: 2px;
+  border-bottom-color: #D3D3D3;
+}
+
+#euojxrqkqg .gt_grand_summary_row {
+  color: #333333;
+  background-color: #FFFFFF;
+  text-transform: inherit;
+  padding-top: 8px;
+  padding-bottom: 8px;
+  padding-left: 5px;
+  padding-right: 5px;
+}
+
+#euojxrqkqg .gt_first_grand_summary_row {
+  padding-top: 8px;
+  padding-bottom: 8px;
+  padding-left: 5px;
+  padding-right: 5px;
+  border-top-style: double;
+  border-top-width: 6px;
+  border-top-color: #D3D3D3;
+}
+
+#euojxrqkqg .gt_last_grand_summary_row_top {
+  padding-top: 8px;
+  padding-bottom: 8px;
+  padding-left: 5px;
+  padding-right: 5px;
+  border-bottom-style: double;
+  border-bottom-width: 6px;
+  border-bottom-color: #D3D3D3;
+}
+
+#euojxrqkqg .gt_striped {
+  background-color: rgba(128, 128, 128, 0.05);
+}
+
+#euojxrqkqg .gt_table_body {
+  border-top-style: solid;
+  border-top-width: 2px;
+  border-top-color: #D3D3D3;
+  border-bottom-style: solid;
+  border-bottom-width: 2px;
+  border-bottom-color: #D3D3D3;
+}
+
+#euojxrqkqg .gt_footnotes {
+  color: #333333;
+  background-color: #FFFFFF;
+  border-bottom-style: none;
+  border-bottom-width: 2px;
+  border-bottom-color: #D3D3D3;
+  border-left-style: none;
+  border-left-width: 2px;
+  border-left-color: #D3D3D3;
+  border-right-style: none;
+  border-right-width: 2px;
+  border-right-color: #D3D3D3;
+}
+
+#euojxrqkqg .gt_footnote {
+  margin: 0px;
+  font-size: 90%;
+  padding-top: 4px;
+  padding-bottom: 4px;
+  padding-left: 5px;
+  padding-right: 5px;
+}
+
+#euojxrqkqg .gt_sourcenotes {
+  color: #333333;
+  background-color: #FFFFFF;
+  border-bottom-style: none;
+  border-bottom-width: 2px;
+  border-bottom-color: #D3D3D3;
+  border-left-style: none;
+  border-left-width: 2px;
+  border-left-color: #D3D3D3;
+  border-right-style: none;
+  border-right-width: 2px;
+  border-right-color: #D3D3D3;
+}
+
+#euojxrqkqg .gt_sourcenote {
+  font-size: 90%;
+  padding-top: 4px;
+  padding-bottom: 4px;
+  padding-left: 5px;
+  padding-right: 5px;
+}
+
+#euojxrqkqg .gt_left {
+  text-align: left;
+}
+
+#euojxrqkqg .gt_center {
+  text-align: center;
+}
+
+#euojxrqkqg .gt_right {
+  text-align: right;
+  font-variant-numeric: tabular-nums;
+}
+
+#euojxrqkqg .gt_font_normal {
+  font-weight: normal;
+}
+
+#euojxrqkqg .gt_font_bold {
+  font-weight: bold;
+}
+
+#euojxrqkqg .gt_font_italic {
+  font-style: italic;
+}
+
+#euojxrqkqg .gt_super {
+  font-size: 65%;
+}
+
+#euojxrqkqg .gt_footnote_marks {
+  font-size: 75%;
+  vertical-align: 0.4em;
+  position: initial;
+}
+
+#euojxrqkqg .gt_asterisk {
+  font-size: 100%;
+  vertical-align: 0;
+}
+
+#euojxrqkqg .gt_indent_1 {
+  text-indent: 5px;
+}
+
+#euojxrqkqg .gt_indent_2 {
+  text-indent: 10px;
+}
+
+#euojxrqkqg .gt_indent_3 {
+  text-indent: 15px;
+}
+
+#euojxrqkqg .gt_indent_4 {
+  text-indent: 20px;
+}
+
+#euojxrqkqg .gt_indent_5 {
+  text-indent: 25px;
+}
+
+#euojxrqkqg .katex-display {
+  display: inline-flex !important;
+  margin-bottom: 0.75em !important;
+}
+
+#euojxrqkqg div.Reactable > div.rt-table > div.rt-thead > div.rt-tr.rt-tr-group-header > div.rt-th-group:after {
+  height: 0px !important;
+}
+</style>
+
+<table class="gt_table caption-top table table-sm table-striped small" data-quarto-bootstrap="false">
+<thead>
+<tr class="gt_heading header">
+<td colspan="6" class="gt_heading gt_title gt_font_normal gt_bottom_border">Table 5. Linear Regression Predicting the Probability Assigned to 'Likely'</td>
+</tr>
+<tr class="gt_col_headings even">
+<th id="term" class="gt_col_heading gt_columns_bottom_border gt_left" data-quarto-table-cell-role="th" scope="col">Term</th>
+<th id="estimate" class="gt_col_heading gt_columns_bottom_border gt_right" data-quarto-table-cell-role="th" scope="col">Estimate</th>
+<th id="std.error" class="gt_col_heading gt_columns_bottom_border gt_right" data-quarto-table-cell-role="th" scope="col">SE</th>
+<th id="conf.low" class="gt_col_heading gt_columns_bottom_border gt_right" data-quarto-table-cell-role="th" scope="col">95% CI Lower</th>
+<th id="conf.high" class="gt_col_heading gt_columns_bottom_border gt_right" data-quarto-table-cell-role="th" scope="col">95% CI Upper</th>
+<th id="p.value" class="gt_col_heading gt_columns_bottom_border gt_right" data-quarto-table-cell-role="th" scope="col">p</th>
+</tr>
+</thead>
+<tbody class="gt_table_body">
+<tr class="odd">
+<td class="gt_row gt_left" headers="term">(Intercept)</td>
+<td class="gt_row gt_right" headers="estimate">72.40</td>
+<td class="gt_row gt_right" headers="std.error">0.93</td>
+<td class="gt_row gt_right" headers="conf.low">70.58</td>
+<td class="gt_row gt_right" headers="conf.high">74.22</td>
+<td class="gt_row gt_right" headers="p.value">&lt;0.001</td>
+</tr>
+<tr class="even">
+<td class="gt_row gt_left" headers="term">order</td>
+<td class="gt_row gt_right" headers="estimate">0.02</td>
+<td class="gt_row gt_right" headers="std.error">0.03</td>
+<td class="gt_row gt_right" headers="conf.low">−0.03</td>
+<td class="gt_row gt_right" headers="conf.high">0.08</td>
+<td class="gt_row gt_right" headers="p.value">0.376</td>
+</tr>
+<tr class="odd">
+<td class="gt_row gt_left" headers="term">educationBachelor</td>
+<td class="gt_row gt_right" headers="estimate">−1.53</td>
+<td class="gt_row gt_right" headers="std.error">0.60</td>
+<td class="gt_row gt_right" headers="conf.low">−2.70</td>
+<td class="gt_row gt_right" headers="conf.high">−0.35</td>
+<td class="gt_row gt_right" headers="p.value">0.011</td>
+</tr>
+<tr class="even">
+<td class="gt_row gt_left" headers="term">educationPostgraduate</td>
+<td class="gt_row gt_right" headers="estimate">−1.61</td>
+<td class="gt_row gt_right" headers="std.error">0.58</td>
+<td class="gt_row gt_right" headers="conf.low">−2.74</td>
+<td class="gt_row gt_right" headers="conf.high">−0.47</td>
+<td class="gt_row gt_right" headers="p.value">0.005</td>
+</tr>
+<tr class="odd">
+<td class="gt_row gt_left" headers="term">englishNot first language</td>
+<td class="gt_row gt_right" headers="estimate">−0.57</td>
+<td class="gt_row gt_right" headers="std.error">0.43</td>
+<td class="gt_row gt_right" headers="conf.low">−1.41</td>
+<td class="gt_row gt_right" headers="conf.high">0.27</td>
+<td class="gt_row gt_right" headers="p.value">0.184</td>
+</tr>
+<tr class="even">
+<td class="gt_row gt_left" headers="term">age25-34</td>
+<td class="gt_row gt_right" headers="estimate">1.32</td>
+<td class="gt_row gt_right" headers="std.error">0.92</td>
+<td class="gt_row gt_right" headers="conf.low">−0.49</td>
+<td class="gt_row gt_right" headers="conf.high">3.13</td>
+<td class="gt_row gt_right" headers="p.value">0.153</td>
+</tr>
+<tr class="odd">
+<td class="gt_row gt_left" headers="term">age35-44</td>
+<td class="gt_row gt_right" headers="estimate">1.70</td>
+<td class="gt_row gt_right" headers="std.error">0.90</td>
+<td class="gt_row gt_right" headers="conf.low">−0.07</td>
+<td class="gt_row gt_right" headers="conf.high">3.47</td>
+<td class="gt_row gt_right" headers="p.value">0.060</td>
+</tr>
+<tr class="even">
+<td class="gt_row gt_left" headers="term">age45-54</td>
+<td class="gt_row gt_right" headers="estimate">1.85</td>
+<td class="gt_row gt_right" headers="std.error">0.91</td>
+<td class="gt_row gt_right" headers="conf.low">0.07</td>
+<td class="gt_row gt_right" headers="conf.high">3.63</td>
+<td class="gt_row gt_right" headers="p.value">0.041</td>
+</tr>
+<tr class="odd">
+<td class="gt_row gt_left" headers="term">age55-64</td>
+<td class="gt_row gt_right" headers="estimate">1.57</td>
+<td class="gt_row gt_right" headers="std.error">0.94</td>
+<td class="gt_row gt_right" headers="conf.low">−0.27</td>
+<td class="gt_row gt_right" headers="conf.high">3.40</td>
+<td class="gt_row gt_right" headers="p.value">0.094</td>
+</tr>
+<tr class="even">
+<td class="gt_row gt_left" headers="term">age65+</td>
+<td class="gt_row gt_right" headers="estimate">1.76</td>
+<td class="gt_row gt_right" headers="std.error">1.00</td>
+<td class="gt_row gt_right" headers="conf.low">−0.20</td>
+<td class="gt_row gt_right" headers="conf.high">3.72</td>
+<td class="gt_row gt_right" headers="p.value">0.078</td>
+</tr>
+</tbody><tfoot>
+<tr class="gt_sourcenotes odd">
+<td colspan="6" class="gt_sourcenote">Reference groups: No degree, English as first language, Under 25</td>
+</tr>
+</tfoot>
+
+</table>
+
+</div>
+</div>
+</div>
+<div class="cell">
+<div class="cell-output-display">
+<div id="fig-education" class="quarto-float quarto-figure quarto-figure-center anchored">
+<figure class="quarto-float quarto-float-fig figure">
+<div aria-describedby="fig-education-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<img src="index_files/figure-html/fig-education-1.png" class="img-fluid figure-img" width="672">
+</div>
+<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-education-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Figure&nbsp;3: Figure 2. Predicted probability assinged to ‘Likely’ by education level, with 95% confidence intervals (from Model 2)
+</figcaption>
+</figure>
+</div>
+</div>
+</div>
+<p>Parameter estimated from M2 are presented in Table 4. Presentation order was not associated with ratings of “Likely” (<em>b</em> = 0.02, 95% CI [-0.03, 0.08], <em>p</em> = 0.376); because the confidence interval included zero, there was no evidence that the position of the word played a role in the rating. Compared with participants without degree, participants with a bachelors degree (<em>b</em> = -1.53, 95% CI [-2.7, -0.35], <em>p</em> = 0.011) and a postgraduate degree (<em>b</em> = -1.61, 95% CI [-2.74, -0.47], <em>p</em> = 0.005) assigned slightly lower porbailities to “Likely”. Non-native Enlgish speakers did not differ significantly from native speaker (<em>b</em> = -0.57, 95% CI [-1.41, 0.27], <em>p</em> = 0.184). All older age groups gave slightly higher ratings that participants under 25, but only the 45-54 group differed significantly (<em>b</em> = 1.85, 95% CI [0.07, 3.63], <em>p</em> = 0.041). As shown in Figure 2, predicted ratings were 72.6% for participants without a degree, 71.1% for those with a bachelor’s degree, and 71% for those with a postgraduate degree. However, these differences were small, only manifesting as a 2 point difference in a 100-point scale. As previously shown the background variables grouped di not significantly improve model fit; therefore, these individual effects are not to be taken as consequential.</p>
+</section>
+</section>
+<section id="discussion" class="level2">
+<h2 class="anchored" data-anchor-id="discussion">Discussion</h2>
+<p>This study examined whether the order in which participants encountered the term, along with their background (age, English background, and education), predicted the probability on a scale of 0 to 100 that they assigned to the term “Likely” among 18 other terms. Overall, participants showed a shared understanding of the term, assigning it an average probability of 72.7%, with a standard deviation (SD) of 10 percentage points. Interestingly, neither variable influenced the rating. The position of the term in the quiz did not help in predicting ratings, which suggests that neither the term surrounding “likely” nor its own position affected how it was interpreted. Background characteristics also added little. Although participants who did have higher education (bachelor’s and postgraduate studies) rated the term “likely” about 1.5 points lower than alternative education levels, the inclusion of these background variables did not meaningfully improve the model fit. Thus, the intercept-only model offered the best suitability, since it was able to balance both fit and simplicity. However, it is important to note that the sample was fairly homogeneous, with most participants holding a university degree and speaking English as a first language, which may partially explain the consistency. Combining all of these components suggests that the interpretation of “likely” was fairly consistent regardless of where the term was, and who was answering it.</p>
+<p>These findings matter both for everyday communication and for research. In daily life, “likely” is used in casual settings, such as predictions, and in professional ones, such as weather forecasts. The present results suggest that listeners tend to picture a probability roughly between 70% and 75% when they hear the term. The findings are also relevant to psychological research, where many Likert-type rating scales use verbal labels such as “likely” and “unlikely”. Although this analysis examines only one term, it provides a baseline for how commonly used labels are understood, which can further inform how researchers word response options and interpret participants’ answers.</p>
+<p>The effects of the predictors were also small. Participants with a degree rated “likely” about 1.5 percentage points lower than those without one. Although this difference was statistically significant, a shift of 1.5 points on a 0 to 100 scale is unlikely to result in meaningful interpretation in the real world. Finally, these results cannot establish causation. Order was randomly assigned, but background characteristics were not, so the findings show that only education was associated with ratings, not that education causes lower ratings.</p>
+<p>Several limitations should be considered. First, the data came from a voluntary online quiz, so participants were self-selected and may have been more interested in topics such as language, statistics, or probability, rather than reflecting the greater population. This is reflected in the sample’s high education level, with most participants holding a bachelor’s or postgraduate degree. Similarly, most participants spoke English as a first language, and fluent and non-fluent non-native speakers were combined because of the small non-fluent sample. As a result, this analysis could not examine how different levels of English proficiency relate to interpretation. Second, only one term was analyzed. Other terms, such as “unlikely’ or “probably”, may be more sensitive to order or background.</p>
+<p>Third, particpants tended to choose rounded variables, aprticualrly in multiples of 5 and 10, as shown in the spiked in Figure 1. The Gaussian model assumes that the responses follow a smooth continosu spread, so this rounding likely explains why the DHARMa uniformity and outliers tests were flagged. While the data did not exactly match what the model expected, the differences appeared modest on the DHARMa plot. This means that the interpretation of the p-value and confidence intervals may be slightly less accurate. Fourth 13.4% of participants were excluded for missing background information. While unknown, these participants could have had different results than those retained, meaning, the outcome may have not been an accurate representation of the original sample. Finally, age was available only in bands. Grouping age in this way assumes everyone within a band responds similarly, which may hide gradual changes in interpretation within each group (James et al., 2013, Chapter 7).</p>
+<p>Future research should extend these findings in several ways. First, examining the remaining 18 phrases, particularly those commonly used as labels on survey scales, would show whether the consistency observed for “Likely” holds across other commonly known terms. Second, a more diverse sample, including participants with less education and more non-native English speakers, would allow a stronger test of whether background shapes interpretation. Third, measuring age as a continuous variable rather than in bands would give a clearer picture of how interpretation changes with age, whereas education and English background can remain categorical. Finally, because participants tended to give rounded responses, future analysis could group ratings into order categories (e.g, 60-64, 65-69, 70-74) and fit it into an ordinal model. This would check whether the same conclusion can be made under a model that better reflects how people actually answer. Overall, this study suggests that “likely” carries a fairly shared meaning of roughly 70 to 75%, regardless of where it appears or who is interpreting it.</p>
+
+
+</section>
+
+</main> <!-- /main -->
+<script id="quarto-html-after-body" type="application/javascript">
+  window.document.addEventListener("DOMContentLoaded", function (event) {
+    const icon = "";
+    const anchorJS = new window.AnchorJS();
+    anchorJS.options = {
+      placement: 'right',
+      icon: icon
+    };
+    anchorJS.add('.anchored');
+    const isCodeAnnotation = (el) => {
+      for (const clz of el.classList) {
+        if (clz.startsWith('code-annotation-')) {                     
+          return true;
+        }
+      }
+      return false;
+    }
+    const onCopySuccess = function(e) {
+      // button target
+      const button = e.trigger;
+      // don't keep focus
+      button.blur();
+      // flash "checked"
+      button.classList.add('code-copy-button-checked');
+      var currentTitle = button.getAttribute("title");
+      button.setAttribute("title", "Copied!");
+      let tooltip;
+      if (window.bootstrap) {
+        button.setAttribute("data-bs-toggle", "tooltip");
+        button.setAttribute("data-bs-placement", "left");
+        button.setAttribute("data-bs-title", "Copied!");
+        tooltip = new bootstrap.Tooltip(button, 
+          { trigger: "manual", 
+            customClass: "code-copy-button-tooltip",
+            offset: [0, -8]});
+        tooltip.show();    
+      }
+      setTimeout(function() {
+        if (tooltip) {
+          tooltip.hide();
+          button.removeAttribute("data-bs-title");
+          button.removeAttribute("data-bs-toggle");
+          button.removeAttribute("data-bs-placement");
+        }
+        button.setAttribute("title", currentTitle);
+        button.classList.remove('code-copy-button-checked');
+      }, 1000);
+      // clear code selection
+      e.clearSelection();
+    }
+    const getTextToCopy = function(trigger) {
+      const outerScaffold = trigger.parentElement.cloneNode(true);
+      const codeEl = outerScaffold.querySelector('code');
+      for (const childEl of codeEl.children) {
+        if (isCodeAnnotation(childEl)) {
+          childEl.remove();
+        }
+      }
+      return codeEl.innerText;
+    }
+    const clipboard = new window.ClipboardJS('.code-copy-button:not([data-in-quarto-modal])', {
+      text: getTextToCopy
+    });
+    clipboard.on('success', onCopySuccess);
+    if (window.document.getElementById('quarto-embedded-source-code-modal')) {
+      const clipboardModal = new window.ClipboardJS('.code-copy-button[data-in-quarto-modal]', {
+        text: getTextToCopy,
+        container: window.document.getElementById('quarto-embedded-source-code-modal')
+      });
+      clipboardModal.on('success', onCopySuccess);
+    }
+      var localhostRegex = new RegExp(/^(?:http|https):\/\/localhost\:?[0-9]*\//);
+      var mailtoRegex = new RegExp(/^mailto:/);
+        var filterRegex = new RegExp('/' + window.location.host + '/');
+      var isInternal = (href) => {
+          return filterRegex.test(href) || localhostRegex.test(href) || mailtoRegex.test(href);
+      }
+      // Inspect non-navigation links and adorn them if external
+     var links = window.document.querySelectorAll('a[href]:not(.nav-link):not(.navbar-brand):not(.toc-action):not(.sidebar-link):not(.sidebar-item-toggle):not(.pagination-link):not(.no-external):not([aria-hidden]):not(.dropdown-item):not(.quarto-navigation-tool):not(.about-link)');
+      for (var i=0; i<links.length; i++) {
+        const link = links[i];
+        if (!isInternal(link.href)) {
+          // undo the damage that might have been done by quarto-nav.js in the case of
+          // links that we want to consider external
+          if (link.dataset.originalHref !== undefined) {
+            link.href = link.dataset.originalHref;
+          }
+        }
+      }
+    function tippyHover(el, contentFn, onTriggerFn, onUntriggerFn) {
+      const config = {
+        allowHTML: true,
+        maxWidth: 500,
+        delay: 100,
+        arrow: false,
+        appendTo: function(el) {
+            return el.parentElement;
+        },
+        interactive: true,
+        interactiveBorder: 10,
+        theme: 'quarto',
+        placement: 'bottom-start',
+      };
+      if (contentFn) {
+        config.content = contentFn;
+      }
+      if (onTriggerFn) {
+        config.onTrigger = onTriggerFn;
+      }
+      if (onUntriggerFn) {
+        config.onUntrigger = onUntriggerFn;
+      }
+      window.tippy(el, config); 
+    }
+    const noterefs = window.document.querySelectorAll('a[role="doc-noteref"]');
+    for (var i=0; i<noterefs.length; i++) {
+      const ref = noterefs[i];
+      tippyHover(ref, function() {
+        // use id or data attribute instead here
+        let href = ref.getAttribute('data-footnote-href') || ref.getAttribute('href');
+        try { href = new URL(href).hash; } catch {}
+        const id = href.replace(/^#\/?/, "");
+        const note = window.document.getElementById(id);
+        if (note) {
+          return note.innerHTML;
+        } else {
+          return "";
+        }
+      });
+    }
+    const xrefs = window.document.querySelectorAll('a.quarto-xref');
+    const processXRef = (id, note) => {
+      // Strip column container classes
+      const stripColumnClz = (el) => {
+        el.classList.remove("page-full", "page-columns");
+        if (el.children) {
+          for (const child of el.children) {
+            stripColumnClz(child);
+          }
+        }
+      }
+      stripColumnClz(note)
+      if (id === null || id.startsWith('sec-')) {
+        // Special case sections, only their first couple elements
+        const container = document.createElement("div");
+        if (note.children && note.children.length > 2) {
+          container.appendChild(note.children[0].cloneNode(true));
+          for (let i = 1; i < note.children.length; i++) {
+            const child = note.children[i];
+            if (child.tagName === "P" && child.innerText === "") {
+              continue;
+            } else {
+              container.appendChild(child.cloneNode(true));
+              break;
+            }
+          }
+          if (window.Quarto?.typesetMath) {
+            window.Quarto.typesetMath(container);
+          }
+          return container.innerHTML
+        } else {
+          if (window.Quarto?.typesetMath) {
+            window.Quarto.typesetMath(note);
+          }
+          return note.innerHTML;
+        }
+      } else {
+        // Remove any anchor links if they are present
+        const anchorLink = note.querySelector('a.anchorjs-link');
+        if (anchorLink) {
+          anchorLink.remove();
+        }
+        if (window.Quarto?.typesetMath) {
+          window.Quarto.typesetMath(note);
+        }
+        if (note.classList.contains("callout")) {
+          return note.outerHTML;
+        } else {
+          return note.innerHTML;
+        }
+      }
+    }
+    for (var i=0; i<xrefs.length; i++) {
+      const xref = xrefs[i];
+      tippyHover(xref, undefined, function(instance) {
+        instance.disable();
+        let url = xref.getAttribute('href');
+        let hash = undefined; 
+        if (url.startsWith('#')) {
+          hash = url;
+        } else {
+          try { hash = new URL(url).hash; } catch {}
+        }
+        if (hash) {
+          const id = hash.replace(/^#\/?/, "");
+          const note = window.document.getElementById(id);
+          if (note !== null) {
+            try {
+              const html = processXRef(id, note.cloneNode(true));
+              instance.setContent(html);
+            } finally {
+              instance.enable();
+              instance.show();
+            }
+          } else {
+            // See if we can fetch this
+            fetch(url.split('#')[0])
+            .then(res => res.text())
+            .then(html => {
+              const parser = new DOMParser();
+              const htmlDoc = parser.parseFromString(html, "text/html");
+              const note = htmlDoc.getElementById(id);
+              if (note !== null) {
+                const html = processXRef(id, note);
+                instance.setContent(html);
+              } 
+            }).finally(() => {
+              instance.enable();
+              instance.show();
+            });
+          }
+        } else {
+          // See if we can fetch a full url (with no hash to target)
+          // This is a special case and we should probably do some content thinning / targeting
+          fetch(url)
+          .then(res => res.text())
+          .then(html => {
+            const parser = new DOMParser();
+            const htmlDoc = parser.parseFromString(html, "text/html");
+            const note = htmlDoc.querySelector('main.content');
+            if (note !== null) {
+              // This should only happen for chapter cross references
+              // (since there is no id in the URL)
+              // remove the first header
+              if (note.children.length > 0 && note.children[0].tagName === "HEADER") {
+                note.children[0].remove();
+              }
+              const html = processXRef(null, note);
+              instance.setContent(html);
+            } 
+          }).finally(() => {
+            instance.enable();
+            instance.show();
+          });
+        }
+      }, function(instance) {
+      });
+    }
+        let selectedAnnoteEl;
+        const selectorForAnnotation = ( cell, annotation) => {
+          let cellAttr = 'data-code-cell="' + cell + '"';
+          let lineAttr = 'data-code-annotation="' +  annotation + '"';
+          const selector = 'span[' + cellAttr + '][' + lineAttr + ']';
+          return selector;
+        }
+        const selectCodeLines = (annoteEl) => {
+          const doc = window.document;
+          const targetCell = annoteEl.getAttribute("data-target-cell");
+          const targetAnnotation = annoteEl.getAttribute("data-target-annotation");
+          const annoteSpan = window.document.querySelector(selectorForAnnotation(targetCell, targetAnnotation));
+          const lines = annoteSpan.getAttribute("data-code-lines").split(",");
+          const lineIds = lines.map((line) => {
+            return targetCell + "-" + line;
+          })
+          let top = null;
+          let height = null;
+          let parent = null;
+          if (lineIds.length > 0) {
+              //compute the position of the single el (top and bottom and make a div)
+              const el = window.document.getElementById(lineIds[0]);
+              top = el.offsetTop;
+              height = el.offsetHeight;
+              parent = el.parentElement.parentElement;
+            if (lineIds.length > 1) {
+              const lastEl = window.document.getElementById(lineIds[lineIds.length - 1]);
+              const bottom = lastEl.offsetTop + lastEl.offsetHeight;
+              height = bottom - top;
+            }
+            if (top !== null && height !== null && parent !== null) {
+              // cook up a div (if necessary) and position it 
+              let div = window.document.getElementById("code-annotation-line-highlight");
+              if (div === null) {
+                div = window.document.createElement("div");
+                div.setAttribute("id", "code-annotation-line-highlight");
+                div.style.position = 'absolute';
+                parent.appendChild(div);
+              }
+              div.style.top = top - 2 + "px";
+              div.style.height = height + 4 + "px";
+              div.style.left = 0;
+              let gutterDiv = window.document.getElementById("code-annotation-line-highlight-gutter");
+              if (gutterDiv === null) {
+                gutterDiv = window.document.createElement("div");
+                gutterDiv.setAttribute("id", "code-annotation-line-highlight-gutter");
+                gutterDiv.style.position = 'absolute';
+                const codeCell = window.document.getElementById(targetCell);
+                const gutter = codeCell.querySelector('.code-annotation-gutter');
+                gutter.appendChild(gutterDiv);
+              }
+              gutterDiv.style.top = top - 2 + "px";
+              gutterDiv.style.height = height + 4 + "px";
+            }
+            selectedAnnoteEl = annoteEl;
+          }
+        };
+        const unselectCodeLines = () => {
+          const elementsIds = ["code-annotation-line-highlight", "code-annotation-line-highlight-gutter"];
+          elementsIds.forEach((elId) => {
+            const div = window.document.getElementById(elId);
+            if (div) {
+              div.remove();
+            }
+          });
+          selectedAnnoteEl = undefined;
+        };
+          // Handle positioning of the toggle
+      window.addEventListener(
+        "resize",
+        throttle(() => {
+          elRect = undefined;
+          if (selectedAnnoteEl) {
+            selectCodeLines(selectedAnnoteEl);
+          }
+        }, 10)
+      );
+      function throttle(fn, ms) {
+      let throttle = false;
+      let timer;
+        return (...args) => {
+          if(!throttle) { // first call gets through
+              fn.apply(this, args);
+              throttle = true;
+          } else { // all the others get throttled
+              if(timer) clearTimeout(timer); // cancel #2
+              timer = setTimeout(() => {
+                fn.apply(this, args);
+                timer = throttle = false;
+              }, ms);
+          }
+        };
+      }
+        // Attach click handler to the DT
+        const annoteDls = window.document.querySelectorAll('dt[data-target-cell]');
+        for (const annoteDlNode of annoteDls) {
+          annoteDlNode.addEventListener('click', (event) => {
+            const clickedEl = event.target;
+            if (clickedEl !== selectedAnnoteEl) {
+              unselectCodeLines();
+              const activeEl = window.document.querySelector('dt[data-target-cell].code-annotation-active');
+              if (activeEl) {
+                activeEl.classList.remove('code-annotation-active');
+              }
+              selectCodeLines(clickedEl);
+              clickedEl.classList.add('code-annotation-active');
+            } else {
+              // Unselect the line
+              unselectCodeLines();
+              clickedEl.classList.remove('code-annotation-active');
+            }
+          });
+        }
+    const findCites = (el) => {
+      const parentEl = el.parentElement;
+      if (parentEl) {
+        const cites = parentEl.dataset.cites;
+        if (cites) {
+          return {
+            el,
+            cites: cites.split(' ')
+          };
+        } else {
+          return findCites(el.parentElement)
+        }
+      } else {
+        return undefined;
+      }
+    };
+    var bibliorefs = window.document.querySelectorAll('a[role="doc-biblioref"]');
+    for (var i=0; i<bibliorefs.length; i++) {
+      const ref = bibliorefs[i];
+      const citeInfo = findCites(ref);
+      if (citeInfo) {
+        tippyHover(citeInfo.el, function() {
+          var popup = window.document.createElement('div');
+          citeInfo.cites.forEach(function(cite) {
+            var citeDiv = window.document.createElement('div');
+            citeDiv.classList.add('hanging-indent');
+            citeDiv.classList.add('csl-entry');
+            var biblioDiv = window.document.getElementById('ref-' + cite);
+            if (biblioDiv) {
+              citeDiv.innerHTML = biblioDiv.innerHTML;
+            }
+            popup.appendChild(citeDiv);
+          });
+          return popup.innerHTML;
+        });
+      }
+    }
+  });
+  </script>
+</div> <!-- /content -->
+
+
+
+
+</body></html>
